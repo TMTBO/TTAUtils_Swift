@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  TTAUtils_Swift
+
+  Created by TobyoTenma on 02/03/2017.
+  Copyright © 2017 TobyoTenma. All rights reserved.
+*/
+
+CFBundleDisplayName = "TTAUtils_Swift";

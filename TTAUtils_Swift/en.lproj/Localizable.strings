@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  TTAUtils_Swift
+
+  Created by TobyoTenma on 02/03/2017.
+  Copyright © 2017 TobyoTenma. All rights reserved.
+*/
+
+/*==================== Global ========================*/
+back = "Back";
+all = "All";
+searchTip = "Search";
+
+currency = "RMB"; // 币种:美元,人民币,港币对应的语言
+
+/*==================== Nav ========================*/
+tabbarHome = "Home";
+tabbarCategory = "Category";
+tabbarCart = "Third";
+tabbarMine = "Mine";
