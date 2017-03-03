@@ -8,8 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
-
+class HomeViewController: UIViewController {
+    let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .date)
 
 }
 
@@ -20,6 +20,11 @@ extension HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(picker)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {

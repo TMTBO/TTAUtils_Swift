@@ -1,5 +1,5 @@
 //
-//  NSString+Common.swift
+//  NSString+Extension.swift
 //  KuaiYiGou_Swift
 //
 //  Created by TobyoTenma on 02/03/2017.
