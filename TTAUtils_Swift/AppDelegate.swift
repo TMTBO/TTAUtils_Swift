@@ -65,6 +65,9 @@ extension AppDelegate {
         naviagtionBar.tintColor = UIColor.white
         naviagtionBar.barTintColor = kDEFAULT_ORANGE_COLOR
         naviagtionBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        // UIBarButtonItem
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(Int.min), vertical: CGFloat(Int.max)), for: UIBarMetrics.default)
     }
 }
 

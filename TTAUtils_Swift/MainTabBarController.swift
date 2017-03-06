@@ -44,11 +44,5 @@ extension MainTabBarController {
         childViewController.tabBarItem.selectedImage = UIImage(named: iconImageName + "_sel")
         let navVc = UINavigationController(rootViewController: childViewController)
         addChildViewController(navVc)
-        _costum(childViewController: childViewController)
-    }
-    
-    fileprivate func _costum(childViewController: UIViewController) {
-        childViewController.view.backgroundColor = kDEFAULT_VIEW_BACKGROUND_COLOR
-        childViewController.navigationController?.navigationBar.subviews.first?.subviews.first?.isHidden = true
     }
 }

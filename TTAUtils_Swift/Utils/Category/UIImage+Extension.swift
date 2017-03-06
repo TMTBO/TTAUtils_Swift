@@ -16,7 +16,7 @@ extension UIImage {
     ///   - color: 颜色
     ///   - size: 大小
     /// - Returns: 图片
-    public func image(withColor color: UIColor, size: CGSize = CGSize(width: 0.1, height: 0.1)) -> UIImage? {
+    public class func image(withColor color: UIColor, size: CGSize = CGSize(width: 0.1, height: 0.1)) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         let ctx = UIGraphicsGetCurrentContext()
         ctx?.setFillColor(color.cgColor)
