@@ -67,7 +67,7 @@ extension String {
     /// - Returns: the size of the result
     public func size(withFont font: UIFont, containerSize: CGSize) -> CGSize {
         var result = CGSize.zero
-        guard isEmpty else { return result }
+        guard !isEmpty else { return result }
         result = (self as NSString).boundingRect(with: containerSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
         result = CGSize(width: min(containerSize.width, CGFloat(ceilf(Float(result.width)))), height: min(containerSize.height, CGFloat(ceilf(Float(result.height)))))
         return result
