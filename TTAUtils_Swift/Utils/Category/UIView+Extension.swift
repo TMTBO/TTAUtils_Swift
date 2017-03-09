@@ -39,11 +39,11 @@ extension UIView {
     
     private var tapGestureCompletionHandler: ((UITapGestureRecognizer) -> Void)? {
         get {
-            return objc_getAssociatedObject(self, AssociatedKeys.tapGestureCompletionHandler) as? (UITapGestureRecognizer) -> Void
+            return objc_getAssociatedObject(self, &AssociatedKeys.tapGestureCompletionHandler) as? (UITapGestureRecognizer) -> Void
         }
         
         set {
-            objc_setAssociatedObject(self, AssociatedKeys.tapGestureCompletionHandler, newValue as AnyObject, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.tapGestureCompletionHandler, newValue as Any, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     

@@ -243,13 +243,13 @@
 		7967603B1E68222000A66400 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				7967603C1E68222000A66400 /* NSString+Extension.swift */,
 				7967603D1E68222000A66400 /* UIColor+Extension.swift */,
 				7967603E1E68222000A66400 /* UIImage+Extension.swift */,
 				7967603F1E68222000A66400 /* UIView+Extension.swift */,
 				793C57611E69460F002F7093 /* UIButton+Extension.swift */,
 				793C57631E6946C1002F7093 /* UILabel+Extension.swift */,
 				793C57651E69470D002F7093 /* UIImageView+Extension.swift */,
+				7967603C1E68222000A66400 /* NSString+Extension.swift */,
 				793C57671E694765002F7093 /* NSBundle+Extension.swift */,
 				793C57691E6947C0002F7093 /* NSDate+Extension.swift */,
 			);
