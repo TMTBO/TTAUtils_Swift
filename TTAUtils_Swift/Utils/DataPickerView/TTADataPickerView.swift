@@ -15,8 +15,17 @@ enum TTADataPickerViewType {
     case time // time
 }
 
+@objc protocol TTADataPickerViewDelegate: class, NSObjectProtocol {
+    
+    @objc optional func dataPickerView(_ pickerView: TTADataPickerView, didSelect titles: [String])
+    @objc optional func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int)
+}
+
 class TTADataPickerView: UIView {
-    public
+    
+    // MARK: - Public properties
+    weak var delegate: TTADataPickerViewDelegate?
+    
     var type: TTADataPickerViewType = .text {
         didSet {
             switch type {
@@ -39,11 +48,15 @@ class TTADataPickerView: UIView {
             }
         }
     }
+    internal (set) var textItemsForComponent: [[String]]? {
+        didSet {
+            pickerView?.reloadAllComponents()
+        }
+    }
     
     
-    
-    
-    private lazy var pickerView: UIPickerView? = {
+    // MARK: - Private properties
+    fileprivate lazy var pickerView: UIPickerView? = {
         let toolBarFrame = self.toolBar.frame
         let pickerView = UIPickerView(frame: CGRect(x: 0, y: toolBarFrame.maxY, width: toolBarFrame.width, height: 216))
         pickerView.showsSelectionIndicator = true
@@ -51,7 +64,7 @@ class TTADataPickerView: UIView {
         pickerView.dataSource = self
         return pickerView
     }()
-    private lazy var datePicker: UIDatePicker? = {
+    fileprivate lazy var datePicker: UIDatePicker? = {
         let toolBarFrame = self.toolBar.frame
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: toolBarFrame.maxY, width: toolBarFrame.width, height: 216))
         datePicker.datePickerMode = .date
@@ -76,7 +89,7 @@ class TTADataPickerView: UIView {
         setupUI()
     }
     
-    public convenience init(title: String, type: TTADataPickerViewType) {
+    convenience init(title: String, type: TTADataPickerViewType) {
         self.init(frame: CGRect.zero)
         toolBar.titleButton.title = title
         configType(type: type)
@@ -99,29 +112,80 @@ class TTADataPickerView: UIView {
     }
 }
 
+// MARK: - Public Functions
+
+extension TTADataPickerView {
+    
+    open func selected(_ titles: [String]?, animated: Bool = true) {
+        guard type == .text else { return }
+        let totalComponent = min(titles?.count ?? 0, pickerView?.numberOfComponents ?? 0)
+        for component in 0..<totalComponent {
+            let items = textItemsForComponent?[component]
+            guard let title = titles?[component] else { continue }
+            guard let _ = items?.contains(title) else { continue }
+            guard let row = items?.index(of: title) else { continue }
+            pickerView?.selectRow(row, inComponent: component, animated: animated)
+        }
+    }
+}
+
+// MARK: - Private Functions
 // MARK: - Actions
 
 extension TTADataPickerView {
     
     @objc fileprivate func didClickCancelButton(button: UIButton) {
-        Log(message: "")
+        Log(message: "cancel")
     }
     
     @objc fileprivate func didClickConfirmButton(button: UIButton) {
-        Log(message: "")
+        Log(message: "done")
+        switch type {
+        case .text:
+            guard let componentCount = pickerView?.numberOfComponents else { return }
+            var textItems = [String]()
+            for component in 0..<componentCount {
+                guard let row = pickerView?.selectedRow(inComponent: component), let title = textItemsForComponent?[component][row] else { continue }
+                textItems.append(title)
+            }
+            guard let _ = delegate?.responds(to: #selector(TTADataPickerViewDelegate.dataPickerView(_:didSelect:))) else { break }
+            delegate?.dataPickerView?(self, didSelect: textItems)
+        case .date, .dateTime, .time:
+            Log(message: "date")
+        }
     }
 }
+
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
 extension TTADataPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        return textItemsForComponent?.count ?? 0
     }
 
     @available(iOS 2.0, *)
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10
+        guard let items = textItemsForComponent?[component] else { return 0 }
+        return items.count
     }
-
     
+    @available(iOS 2.0, *)
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        guard let items = textItemsForComponent?[component] else { return nil }
+        return items[row]
+    }
+    
+    @available(iOS 2.0, *)
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let componentCount = pickerView.numberOfComponents
+        for index in 0..<componentCount {
+            guard index != component && index > component else { continue }
+            pickerView.reloadComponent(index)
+            pickerView.selectRow(0, inComponent: index, animated: true)
+        }
+        
+        guard let _ = delegate?.responds(to: #selector(TTADataPickerViewDelegate.dataPickerView(_:didChange:inComponent:))) else { return }
+        delegate?.dataPickerView?(self, didChange: row, inComponent: component)
+    }
 }

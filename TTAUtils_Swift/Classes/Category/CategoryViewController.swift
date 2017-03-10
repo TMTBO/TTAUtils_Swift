@@ -42,8 +42,8 @@ extension CategoryViewController {
     
     private func testUIButtonLayoutType() {
         let button = UIButton(title: "Hello world")
-        button.setBackgroundImage(UIImage.image(withColor: .orange), for: .normal)
-        button.setImage(UIImage.image(withColor: .red, size: CGSize(width: 50, height: 50)), for: .normal)
+        button.setBackgroundImage(UIImage.image(color: .orange), for: .normal)
+        button.setImage(UIImage.image(color: .red, size: CGSize(width: 50, height: 50)), for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         button.center = view.center
         button.tag = 0

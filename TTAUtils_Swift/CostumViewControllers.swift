@@ -16,7 +16,7 @@ extension UIViewController {
     open func custonViewController() {
         view.backgroundColor = kDEFAULT_VIEW_BACKGROUND_COLOR
         
-        //        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.subviews.first?.subviews.first?.isHidden = true // 隐藏导航栏下黑线
     }
     

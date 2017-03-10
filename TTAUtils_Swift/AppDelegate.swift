@@ -52,6 +52,7 @@ extension AppDelegate {
     fileprivate func _configureWindow() {
         let tabbar = MainTabBarController()
         window = UIWindow()
+        window?.backgroundColor = .white
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
     }

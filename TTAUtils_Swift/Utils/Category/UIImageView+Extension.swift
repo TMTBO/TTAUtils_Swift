@@ -12,7 +12,7 @@ extension UIImageView {
     
     
     /// add the sd_webimage code here
-    public func tta_setImageWithURL(urlString: String, placeHolderName: String) {
+    public func tta_setImageWithURL(url: URL?, placeholderImage: UIImage?) {
         
     }
 }

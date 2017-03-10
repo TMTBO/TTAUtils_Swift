@@ -37,12 +37,12 @@ private struct AssociateKey {
 
 extension UIButton {
     
-    convenience init(title: String?, titleColor: UIColor = UIColor.darkGray, imageName: String? = nil, backgroundImageName: String? = nil, fontSize: CGFloat = 13, target: AnyObject? = nil, action: String? = nil, event: UIControlEvents = .touchUpInside){
+    convenience init(title: String?, titleColor: UIColor = UIColor.darkGray, imageName: String? = nil, backgroundImageName: String? = nil, font: UIFont = UIFont.systemFont(ofSize: 14), target: AnyObject? = nil, action: String? = nil, event: UIControlEvents = .touchUpInside){
         self.init()
         if let title = title {
             self.setTitle(title, for: .normal)
             self.setTitleColor(titleColor, for: .normal)
-            self.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+            self.titleLabel?.font = font
         }
         
         if let imageName = imageName  {
