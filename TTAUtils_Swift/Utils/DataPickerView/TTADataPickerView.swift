@@ -5,32 +5,106 @@
 //  Created by TobyoTenma on 03/03/2017.
 //  Copyright © 2017 TobyoTenma. All rights reserved.
 //
+/**
+ TTADataPickerView A View allow you select date or text easily
+ 
+ - example: *To show the picker view* `show()`
+ - example: *To dismiss the picker view* `dismiss()`
+ 
+ - author: TobyoTenma
+ - date: 03/12/2017
+ - version: 0.9
+ */
 
 import UIKit
 
+/// The component tpye of the TTADataPickerView
+
 enum TTADataPickerViewType {
-    case text // pickerView default
-    case date // datePicker default, date
-    case dateTime // date and time
-    case time // time
+    /// pickerView default
+    case text
+    /// datePicker default, date
+    case date
+    /// date and time
+    case dateTime
+    /// time
+    case time
 }
 
-@objc protocol TTADataPickerViewDelegate: class, NSObjectProtocol {
+/// TTADataPickerViewDelegate
+
+protocol TTADataPickerViewDelegate: NSObjectProtocol {
     
-    @objc optional func dataPickerView(_ pickerView: TTADataPickerView, didSelect titles: [String])
-    @objc optional func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int)
+    /// When the type of dataPickerView is `.text`, you should use this function to handle the selection
+    ///
+    /// - Parameters:
+    ///   - pickerView: PickerView
+    ///   - titles: Selected titles
+    func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String])
+    
+    /// When the type of dataPickerView is *NOT* `.text`, you should use this function to handle the selection
+    ///
+    /// - Parameters:
+    ///   - pickerView: PickerView
+    ///   - date: Selected date
+    func dataPickerView(_ pickerView: TTADataPickerView, didSelectDate date: Date)
+    
+    /// When any row of any component's value changed, this function will be called
+    ///
+    /// - Parameters:
+    ///   - pickerView: PickerView
+    ///   - row: Changed row
+    ///   - component: Changed component
+    func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int)
+    
+    /// Clicked the cancelButton will call this function
+    ///
+    /// - Parameter pickerView: Picker View
+    func dataPickerViewWillCancel(_ pickerView: TTADataPickerView)
+    
+    /// Clicked the cancelButton this function will be called At the very end of handled all the things
+    ///
+    /// - Parameter pickerView: Picker View
+    func dataPickerViewDidCancel(_ pickerView: TTADataPickerView)
 }
 
+// MARK: - Optional delegate functions
+
+extension TTADataPickerViewDelegate {
+    
+    func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
+        
+    }
+    
+    func dataPickerView(_ pickerView: TTADataPickerView, didSelectDate date: Date) {
+        
+    }
+    
+    func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int) {
+        
+    }
+    
+    func dataPickerViewWillCancel(_ pickerView: TTADataPickerView) {
+        
+    }
+    
+    func dataPickerViewDidCancel(_ pickerView: TTADataPickerView){
+        
+    }
+}
+
+/// TTADataPickerView
 class TTADataPickerView: UIView {
     
     // MARK: - Public properties
+    
     weak var delegate: TTADataPickerViewDelegate?
     
+    /// Picker view component type, for MORE TTADataPickerViewType
     var type: TTADataPickerViewType = .text {
         didSet {
             switch type {
             case .text:
-                Log(message: "\(type)")
                 guard let picker = pickerView else { return }
                 self.addSubview(picker)
             case .date:
@@ -48,12 +122,13 @@ class TTADataPickerView: UIView {
             }
         }
     }
+    
+    /// When the type of pickerView is `.text`, this property should be set
     internal (set) var textItemsForComponent: [[String]]? {
         didSet {
             pickerView?.reloadAllComponents()
         }
     }
-    
     
     // MARK: - Private properties
     fileprivate lazy var pickerView: UIPickerView? = {
@@ -70,10 +145,12 @@ class TTADataPickerView: UIView {
         datePicker.datePickerMode = .date
         return datePicker
     }()
-    private let toolBar: TTADataPickerToolBar = {
+    fileprivate let toolBar: TTADataPickerToolBar = {
         let toolBar = TTADataPickerToolBar()
         return toolBar
     }()
+    
+    fileprivate let dataPickerController = TTADataPickerViewController()
     
     override init(frame: CGRect) {
         var rect = UIScreen.main.bounds
@@ -112,11 +189,92 @@ class TTADataPickerView: UIView {
     }
 }
 
-// MARK: - Public Functions
+// MARK: - Public Functions & Properties
 
 extension TTADataPickerView {
     
-    open func selected(_ titles: [String]?, animated: Bool = true) {
+    // MARK: - Public ReadOnly properties, Global apperance properties
+    
+    var cancelButtonAttributes: [String: Any]? {
+        get {
+            return toolBar.cancelButton.titleTextAttributes(for: .normal)
+        }
+    }
+    
+    var confirmButtonAttributes: [String: Any]? {
+        get {
+            return toolBar.confirmButton.titleTextAttributes(for: .normal)
+        }
+    }
+    
+    var toolBarBarTintColor: UIColor? {
+        get {
+            return toolBar.barTintColor
+        }
+    }
+    
+    var toolBarTintColor: UIColor? {
+        get {
+            return toolBar.tintColor
+        }
+    }
+    
+    var titleFont: UIFont {
+        get {
+            return toolBar.titleButton.font!
+        }
+    }
+    
+    var titleColor: UIColor {
+        get {
+            return toolBar.titleButton.titleColor!
+        }
+    }
+    
+    // MARK: - Public Functions
+    // MARK: - Global apperance properties functions
+    dynamic open func setConfirmButtonAttributes(att: [String: Any]?) {
+        toolBar.confirmButton.setTitleTextAttributes(att, for: .normal)
+    }
+    
+    dynamic open func setCancelButtonAttributes(att: [String: Any]?) {
+        toolBar.cancelButton.setTitleTextAttributes(att, for: .normal)
+    }
+    
+    dynamic open func setToolBarBarTintColor(color: UIColor?) {
+        toolBar.barTintColor = color
+    }
+    
+    dynamic open func setToolBarTintColor(color: UIColor?) {
+        toolBar.tintColor = color
+    }
+    
+    dynamic open func setTitleFont(font: UIFont) {
+        toolBar.titleButton.font = font
+    }
+    
+    dynamic open func setTitleColor(color: UIColor) {
+        toolBar.titleButton.titleColor = color
+    }
+    
+    /// ReloadComponent
+    ///
+    /// - Parameter component: Component
+    open func reloadComponent(component: Int) {
+        pickerView?.reloadComponent(component)
+    }
+    
+    /// ReloadAll Components
+    open func reloadAllComponents() {
+        pickerView?.reloadAllComponents()
+    }
+    
+    /// Selected titles, When the type is `.text`, call this function will set the PickerView select the titles
+    ///
+    /// - Parameters:
+    ///   - titles: Selected titles
+    ///   - animated: Is select with Animation, default is true
+    open func selectedTitles(_ titles: [String]?, animated: Bool = true) {
         guard type == .text else { return }
         let totalComponent = min(titles?.count ?? 0, pickerView?.numberOfComponents ?? 0)
         for component in 0..<totalComponent {
@@ -127,6 +285,30 @@ extension TTADataPickerView {
             pickerView?.selectRow(row, inComponent: component, animated: animated)
         }
     }
+    
+    /// Selected the date, When the type is NOT `.text`, call this function will set the datePicker select the date
+    ///
+    /// - Parameters:
+    ///   - date: Selected date
+    ///   - animated: Is select with Animation, default is true
+    open func selectedDate(_ date: Date?, animated: Bool = true) {
+        guard let selectedDate = date else { return }
+        datePicker?.setDate(selectedDate, animated: animated)
+    }
+    
+    /// Show the DatePickerView
+    ///
+    /// - Parameter completion: Complection handler
+    open func show(with completion: (() -> Void)? = nil) {
+        dataPickerController.showPickerView(pickerView: self, completion: completion)
+    }
+    
+    /// Dismiss the the DatePickerView
+    ///
+    /// - Parameter completion: Complection handler
+    open func dismiss(with completion: (() -> Void)? = nil) {
+        dataPickerController.dismissWithCompletion(completion: completion)
+    }
 }
 
 // MARK: - Private Functions
@@ -135,11 +317,10 @@ extension TTADataPickerView {
 extension TTADataPickerView {
     
     @objc fileprivate func didClickCancelButton(button: UIButton) {
-        Log(message: "cancel")
+        dismiss()
     }
     
     @objc fileprivate func didClickConfirmButton(button: UIButton) {
-        Log(message: "done")
         switch type {
         case .text:
             guard let componentCount = pickerView?.numberOfComponents else { return }
@@ -148,11 +329,12 @@ extension TTADataPickerView {
                 guard let row = pickerView?.selectedRow(inComponent: component), let title = textItemsForComponent?[component][row] else { continue }
                 textItems.append(title)
             }
-            guard let _ = delegate?.responds(to: #selector(TTADataPickerViewDelegate.dataPickerView(_:didSelect:))) else { break }
-            delegate?.dataPickerView?(self, didSelect: textItems)
+            delegate?.dataPickerView(self, didSelectTitles: textItems)
         case .date, .dateTime, .time:
-            Log(message: "date")
+            guard let date = datePicker?.date else { return }
+            delegate?.dataPickerView(self, didSelectDate: date)
         }
+        dismiss()
     }
 }
 
@@ -184,8 +366,6 @@ extension TTADataPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             pickerView.reloadComponent(index)
             pickerView.selectRow(0, inComponent: index, animated: true)
         }
-        
-        guard let _ = delegate?.responds(to: #selector(TTADataPickerViewDelegate.dataPickerView(_:didChange:inComponent:))) else { return }
-        delegate?.dataPickerView?(self, didChange: row, inComponent: component)
+        delegate?.dataPickerView(self, didChange: row, inComponent: component)
     }
 }

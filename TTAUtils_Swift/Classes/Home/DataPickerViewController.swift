@@ -10,7 +10,7 @@ import UIKit
 
 class DataPickerViewController: UIViewController {
     
-    let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .text)
+    let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .dateTime)
     
     deinit {
         Log(message: "\(NSStringFromClass(type(of: self))) deinit")
@@ -43,13 +43,27 @@ extension DataPickerViewController {
 extension DataPickerViewController {
     
     fileprivate func setupUI() {
-        view.addSubview(picker)
+//        view.addSubview(picker)
         
         view.addTapGesture { (_) in
-            let titles = self.title?.components(separatedBy: " ")
-            self.picker.selected(titles, animated: true)
+            if self.picker.type == .text {
+                let titles = self.title?.components(separatedBy: " ")
+                self.picker.selectedTitles(titles, animated: true)
+            } else {
+                self.picker.selectedDate(Date())
+            }
+            self.picker.show()
+            
+            
+//            let vc = TTADataPickerViewController()
+//            self.present(vc, animated: true, completion: nil)
         }
+        TTADataPickerView.appearance().setConfirmButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.blue])
+        TTADataPickerView.appearance().setCancelButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.red])
+        TTADataPickerView.appearance().setToolBarTintColor(color: .orange)
+        TTADataPickerView.appearance().setToolBarBarTintColor(color: .cyan)
         
+        picker.type = .date
         picker.delegate = self
         picker.textItemsForComponent = [["hello", "hello", "hello", "hello", "hello", "world", "hello"], ["world", "world", "world", "world", "hello", "world", "world"], ["yeah", "ooooh"]]
     }
@@ -59,13 +73,13 @@ extension DataPickerViewController {
 
 extension DataPickerViewController: TTADataPickerViewDelegate {
     
-    @objc(dataPickerView:didSelect:)
-    internal func dataPickerView(_ pickerView: TTADataPickerView, didSelect titles: [String]) {
-        var titleStr = String()
-        for str in titles {
-            titleStr += str + " "
-        }
-        title = titleStr
+    func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
+        title = titles.joined(separator: " ")
+    }
+    
+    internal func dataPickerView(_ pickerView: TTADataPickerView, didSelectDate date: Date) {
+        tta_dateFormatter.timeStyle = .none
+        title = tta_dateFormatter.string(from: date)
     }
 
 }

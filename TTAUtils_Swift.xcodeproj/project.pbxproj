@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		703AA8413B8B0AC32A6BFC6B /* Pods_TTAUtils_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F7E36E997E1B1AD28BAD01 /* Pods_TTAUtils_Swift.framework */; };
+		7903780D1E753B2700E1A705 /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903780C1E753B2700E1A705 /* TTADataPickerViewController.swift */; };
 		793C575C1E690FD9002F7093 /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C575B1E690FD9002F7093 /* TTADataPickerView.swift */; };
 		793C575E1E69140E002F7093 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C575D1E69140E002F7093 /* TTADataPickerToolBar.swift */; };
 		793C57601E6915A6002F7093 /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C575F1E6915A6002F7093 /* TTADataPickerTitleBarButtonItem.swift */; };
@@ -69,6 +70,7 @@
 		2736560FCD96B35DFD530688 /* Pods-TTAUtils_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		466F2560CF23E79C6C262B31 /* Pods-TTAUtils_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_Swift/Pods-TTAUtils_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6D36BC0FF968F2A6596CDA8D /* Pods-TTAUtils_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7903780C1E753B2700E1A705 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewController.swift; sourceTree = "<group>"; };
 		793C575B1E690FD9002F7093 /* TTADataPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerView.swift; sourceTree = "<group>"; };
 		793C575D1E69140E002F7093 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBar.swift; sourceTree = "<group>"; };
 		793C575F1E6915A6002F7093 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				793C575B1E690FD9002F7093 /* TTADataPickerView.swift */,
 				793C575D1E69140E002F7093 /* TTADataPickerToolBar.swift */,
 				793C575F1E6915A6002F7093 /* TTADataPickerTitleBarButtonItem.swift */,
+				7903780C1E753B2700E1A705 /* TTADataPickerViewController.swift */,
 			);
 			path = DataPickerView;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				796760211E681FDB00A66400 /* AppDelegate.swift in Sources */,
 				796760341E681FF700A66400 /* HomeViewController.swift in Sources */,
 				79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */,
+				7903780D1E753B2700E1A705 /* TTADataPickerViewController.swift in Sources */,
 				793C575C1E690FD9002F7093 /* TTADataPickerView.swift in Sources */,
 				79E985D91E72D4CD00D76A95 /* SelectView.swift in Sources */,
 				79E985D21E72D4CD00D76A95 /* BaseProtocol.swift in Sources */,

@@ -130,6 +130,7 @@ extension HomeViewController {
             vc = DataPickerViewController()
         }
         guard let newVc = vc else { return }
+        vc?.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newVc, animated: true)
     }
 }

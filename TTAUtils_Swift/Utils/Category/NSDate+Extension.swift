@@ -8,7 +8,12 @@
 
 import Foundation
 
-let tta_dateFormatter: DateFormatter = DateFormatter()
+let tta_dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    return formatter
+}()
 
 let tta_calendar: Calendar = Calendar.current
 
