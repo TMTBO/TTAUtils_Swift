@@ -4,9 +4,15 @@
 target 'TTAUtils_Swift' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-pod 'ObjectMapper'
-pod 'FSPagerView'
-pod 'SnapKit'
+  
+  pod 'TTADataPickerView', :path => '/Users/tobyotenma/Developer/Git/GitHub/TTADataPickerView'
+  
+  
+  
+  pod 'ObjectMapper'
+  pod 'FSPagerView'
+  pod 'SnapKit'
+  
   # Pods for TTAUtils_Swift
 
   target 'TTAUtils_SwiftTests' do
