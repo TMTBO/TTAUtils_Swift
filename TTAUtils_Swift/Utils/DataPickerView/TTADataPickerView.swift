@@ -105,20 +105,20 @@ class TTADataPickerView: UIView {
         didSet {
             switch type {
             case .text:
-                guard let picker = pickerView else { return }
-                self.addSubview(picker)
+                pickerView?.isHidden = false
+                datePicker?.isHidden = true
             case .date:
                 datePicker?.datePickerMode = .date
-                guard let picker = datePicker else { return }
-                self.addSubview(picker)
+                pickerView?.isHidden = true
+                datePicker?.isHidden = false
             case .dateTime:
                 datePicker?.datePickerMode = .dateAndTime
-                guard let picker = datePicker else { return }
-                self.addSubview(picker)
+                pickerView?.isHidden = true
+                datePicker?.isHidden = false
             case .time:
                 datePicker?.datePickerMode = .time
-                guard let picker = datePicker else { return }
-                self.addSubview(picker)
+                pickerView?.isHidden = true
+                datePicker?.isHidden = false
             }
         }
     }
@@ -181,6 +181,11 @@ class TTADataPickerView: UIView {
         toolBar.confirmButton.target = self
         toolBar.confirmButton.action = #selector(didClickConfirmButton(button:))
         addSubview(toolBar)
+        
+        guard let picker = pickerView else { return }
+        self.addSubview(picker)
+        guard let apicker = datePicker else { return }
+        self.addSubview(apicker)
     }
     
     /// the initializer can NOT call the `didSet` and `willSet` method, so we need this function
