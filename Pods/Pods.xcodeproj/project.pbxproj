@@ -131,7 +131,7 @@
 
 /* Begin PBXFileReference section */
 		0236C174B9F8C644747F71E9246BAFCE /* IntegerOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerOperators.swift; path = Sources/IntegerOperators.swift; sourceTree = "<group>"; };
-		05B870F14F621D74715A448DF095DA82 /* Pods_TTAUtils_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTAUtils_SwiftUITests.framework; path = "Pods-TTAUtils_SwiftUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B870F14F621D74715A448DF095DA82 /* Pods_TTAUtils_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTAUtils_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A71E022C7B036B96E36B9C011395DD /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
 		0DC7C91420261FC0EEBD990D9C0EF11D /* ObjectMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.xcconfig; sourceTree = "<group>"; };
 		0EF5DE4640BDBFB1CC4F6F0EF2907F5C /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		207ABF4D3DFFD47A42949B7D1D3E5206 /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
 		24AD2CD7E84863CCD7B44877899F089A /* Pods-TTAUtils_SwiftUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTAUtils_SwiftUITests-resources.sh"; sourceTree = "<group>"; };
 		267EBBF5A3C6982A0502F73411355B18 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
-		2768BAB7A9016C19C43DF07971869D0D /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		2768BAB7A9016C19C43DF07971869D0D /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
 		27C193E396E613ED92D4062003FC2127 /* Pods-TTAUtils_SwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTAUtils_SwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		294F16A86D0E11E88E48C9B75788B7F3 /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Sources/Mapper.swift; sourceTree = "<group>"; };
 		2B33410AB2F05952F5F6C84EEE0D6430 /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
@@ -162,18 +162,18 @@
 		36A77366A224A15B1018B2CCBC617376 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		38AA026B8548560A55B878A20DEF67E3 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
 		397ECF0A0889F6CEA8ADE6BB4F359EB9 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		3B9F067C5D1DB8D527B325DDDA165C61 /* Pods_TTAUtils_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTAUtils_Swift.framework; path = "Pods-TTAUtils_Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9F067C5D1DB8D527B325DDDA165C61 /* Pods_TTAUtils_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTAUtils_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D071BAC39727DB26E33B644B0ADE4D4 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
 		3E61996E5F7B26A36AAF8372C3B161B0 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
 		3F3EE48B21F0109E43A4CFB00951D3B2 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
-		3F58C4CDDE96CFAB6322F42BA649F45D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F58C4CDDE96CFAB6322F42BA649F45D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF48BD428CCD0B28999034A2A5B9E7 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
 		4684E4360F6252A88661B025BEFBAA75 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		46ABE7B554D4E8807D4C5EEDC7D834AE /* Pods-TTAUtils_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTAUtils_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		47F51871F7041FD888E6D5406FE1AF6D /* Pods-TTAUtils_Swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTAUtils_Swift-frameworks.sh"; sourceTree = "<group>"; };
 		482B628561D945CF992AF4208D377BF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AADE222D74C84E95D158BDDD49EACD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F36540839F0430DB28B9DD815D624F6 /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FSPagerView.modulemap; sourceTree = "<group>"; };
+		4F36540839F0430DB28B9DD815D624F6 /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FSPagerView.modulemap; sourceTree = "<group>"; };
 		54BF9E22FE21E97A53587682A089533E /* Pods-TTAUtils_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTAUtils_Swift-umbrella.h"; sourceTree = "<group>"; };
 		565F4125FD73B84299B176003CDA7B47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569C0FAAFB2DE0126294DB158502972A /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
@@ -194,24 +194,24 @@
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7F317C3F6D816979733C6B6EFF769D22 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		812615EDA4B4F20109793DD14CE9FB62 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		82E0054B479ADC0428BD5B9BA0505DF0 /* TTADataPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTADataPickerView.modulemap; sourceTree = "<group>"; };
+		82E0054B479ADC0428BD5B9BA0505DF0 /* TTADataPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TTADataPickerView.modulemap; sourceTree = "<group>"; };
 		83351779A1014CC0325A3894D18A03E9 /* FSPagerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.xcconfig; sourceTree = "<group>"; };
 		86CCCDC13E890944221F1A1BECC609F0 /* Pods-TTAUtils_SwiftUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTAUtils_SwiftUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		87A2F86D12F9AF81E7BDB9664A993A14 /* Pods-TTAUtils_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTAUtils_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		89DD54FB055D378C77EF54D178FC777F /* Pods-TTAUtils_Swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTAUtils_Swift-acknowledgements.plist"; sourceTree = "<group>"; };
-		8ABF0F1AFE567C664C2491B8F9FCECD3 /* TTADataPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTADataPickerView.framework; path = TTADataPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABF0F1AFE567C664C2491B8F9FCECD3 /* TTADataPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTADataPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B74D6EC29EA190FB01C88F43F1B1819 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
 		8CEA51DFEC3679B7245382A2801877D9 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
 		8EA258FAB4114063FD1E6C0C3BE39C3F /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		931E9C759DA45A01DC985056BE74A9C2 /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96129B283A7930F5716F5659F8C4DEF2 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		989180EE30FF9D0F4CFE1AB29B33CA48 /* Pods-TTAUtils_SwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTAUtils_SwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		999FDCF672C59939BA2BADCCC6F06CAA /* TTADataPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-umbrella.h"; sourceTree = "<group>"; };
-		9D514FBA388271164429B62A17DB8690 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		9D514FBA388271164429B62A17DB8690 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		9D7D031F6A23B8BD95DC77AF11086036 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		9E931BAED69CCF64A63C7B62B3C8B984 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10EB8B07A81147C65A7CED0854589DF /* Pods-TTAUtils_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTAUtils_Swift.modulemap"; sourceTree = "<group>"; };
+		9E931BAED69CCF64A63C7B62B3C8B984 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10EB8B07A81147C65A7CED0854589DF /* Pods-TTAUtils_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TTAUtils_Swift.modulemap"; sourceTree = "<group>"; };
 		A1F79D839F23DA5EB2A60F39CEE4D2D9 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		A250694E129F3B8DBFA9F734FDA9D34A /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
 		A2601C87AC1BAA4F3BFE7FADAAC92B4E /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
@@ -219,14 +219,14 @@
 		A352F95CAEC838EF6098F3FDDBA4A2AD /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
 		A4E6ABF6F4DEABB39CE1575F34B7E7D2 /* Pods-TTAUtils_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTAUtils_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A94251292775A79399E8624670C10432 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		ABB3BF0A9E7B1087BD57EF34EF49EACB /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSPagerView.framework; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB3BF0A9E7B1087BD57EF34EF49EACB /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE38793416572D67684C4B993FF3E3EB /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
 		AF2DD4C4BF3611AF3FF8D746056E4091 /* Pods-TTAUtils_SwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTAUtils_SwiftTests-frameworks.sh"; sourceTree = "<group>"; };
 		AF924E3B09F95C8608669FBB5126DDDE /* Pods-TTAUtils_SwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTAUtils_SwiftTests-resources.sh"; sourceTree = "<group>"; };
 		B0C3AA7EAD8B5530754833C3EA1E7EF9 /* Pods-TTAUtils_Swift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTAUtils_Swift-resources.sh"; sourceTree = "<group>"; };
 		B4D3FF337A36E79CC6A180CFAB340F1F /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBar.swift; sourceTree = "<group>"; };
 		B6BE1071160C59FC0D5B0BB4EBA8AE7E /* TTADataPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTADataPickerView.xcconfig; sourceTree = "<group>"; };
-		B8631372468B5BDD102E4E1139CF2319 /* Pods_TTAUtils_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTAUtils_SwiftTests.framework; path = "Pods-TTAUtils_SwiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8631372468B5BDD102E4E1139CF2319 /* Pods_TTAUtils_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTAUtils_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B300CDBB2EC60AE2F9A853CABA3270 /* Pods-TTAUtils_SwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTAUtils_SwiftTests-dummy.m"; sourceTree = "<group>"; };
 		B989DE5E6CB08FC23C6945E33FC15098 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
 		BAB763D2A7B0DA6C3855E500D94CD4F1 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		CE18C0C55BF1FD4CCF122B7707CEDD0E /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		D09616844597F8BDB8D1446C9FEA650E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D10E6B0F03A2E8AA664500B79C7AEEEB /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		D11CABEC0B764C59E5670418B8F97CE9 /* Pods-TTAUtils_SwiftUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTAUtils_SwiftUITests.modulemap"; sourceTree = "<group>"; };
+		D11CABEC0B764C59E5670418B8F97CE9 /* Pods-TTAUtils_SwiftUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TTAUtils_SwiftUITests.modulemap"; sourceTree = "<group>"; };
 		D2D432E29CBD0DFBFE86BD87B94BBDE8 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		D2E1F87F69252C73041AA9C1A1F06791 /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
 		D76F6EAF772030378D6571744CE190DF /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 		F27E38E01496BA52B4DD06D1DC366A5D /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
 		F2B2FCDCD4DF116B7AED458CE136165D /* Pods-TTAUtils_Swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTAUtils_Swift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F4CA306535B54CA3053CCB1AE4F6D90D /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
-		F56CD3C6F9916436C78A05EE855D8848 /* Pods-TTAUtils_SwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTAUtils_SwiftTests.modulemap"; sourceTree = "<group>"; };
+		F56CD3C6F9916436C78A05EE855D8848 /* Pods-TTAUtils_SwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TTAUtils_SwiftTests.modulemap"; sourceTree = "<group>"; };
 		F7AA4E1D91BF5D7B7E35205B799EEC1B /* Pods-TTAUtils_SwiftUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTAUtils_SwiftUITests-umbrella.h"; sourceTree = "<group>"; };
 		F7FE9774CB2333BB15DFDB85BC5C382D /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		F942CE9DD9618F1DEABF564AE8B94BA1 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
@@ -434,7 +434,6 @@
 				1BB246B1CEA23868D5A6D9A2E50C0325 /* UILayoutSupport+Extensions.swift */,
 				342D64A7E2DB03827FFC0993C2599235 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -520,19 +519,17 @@
 				7AE9CB2BC883A84426FD353F8C2B34B7 /* URLTransform.swift */,
 				497515B9427B0692B219B8A30A2DBEBE /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
 		98185A19840D26737A2D412533D0CEA2 /* TTADataPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				0EF5DE4640BDBFB1CC4F6F0EF2907F5C /* TTADataPickerTitleBarButtonItem.swift */,
-				B4D3FF337A36E79CC6A180CFAB340F1F /* TTADataPickerToolBar.swift */,
 				C7EC7BA74C3AF51C8C259F8E3CA0F947 /* TTADataPickerView.swift */,
+				B4D3FF337A36E79CC6A180CFAB340F1F /* TTADataPickerToolBar.swift */,
+				0EF5DE4640BDBFB1CC4F6F0EF2907F5C /* TTADataPickerTitleBarButtonItem.swift */,
 				6462A0CAD4727296C72625442AF6A562 /* TTADataPickerViewController.swift */,
 			);
-			name = TTADataPickerView;
 			path = TTADataPickerView;
 			sourceTree = "<group>";
 		};
@@ -558,7 +555,6 @@
 				B989DE5E6CB08FC23C6945E33FC15098 /* FSPageViewTransformer.swift */,
 				601555A40436637554B20123C271110A /* Support Files */,
 			);
-			name = FSPagerView;
 			path = FSPagerView;
 			sourceTree = "<group>";
 		};
