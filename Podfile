@@ -6,7 +6,6 @@ target 'TTAUtils_Swift' do
   use_frameworks!
   
   pod 'TTADataPickerView', :path => '/Users/tobyotenma/Developer/Git/GitHub/TTADataPickerView'
-  pod 'SwiftNetwork', :path => '/Users/tobyotenma/Developer/Git/GitHub/SwiftNetwork'
   
   
   pod 'ObjectMapper'

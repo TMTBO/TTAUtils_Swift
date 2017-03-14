@@ -93,7 +93,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/FSPagerView/FSPagerView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftNetwork/SwiftNetwork.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TTADataPickerView/TTADataPickerView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -101,7 +100,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/FSPagerView/FSPagerView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftNetwork/SwiftNetwork.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TTADataPickerView/TTADataPickerView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
