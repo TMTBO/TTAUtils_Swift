@@ -1,0 +1,32 @@
+{
+  "name": "SwiftNetwork",
+  "version": "0.1.0",
+  "summary": "A Swift Network tool based in Alamofire",
+  "description": "A Swift Network tool based in Alamofire, you can use in with mutil services!",
+  "homepage": "https://github.com/TMTBO/PrivatePod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "TobyoTenma": "tmtbo@hotmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/TMTBO/PrivatePod.git",
+    "tag": "0.1.0"
+  },
+  "source_files": [
+    "SwiftNetwork",
+    "SwiftNetwork/**/*.{swift}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "requires_arc": true,
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.4"
+    ]
+  }
+}
