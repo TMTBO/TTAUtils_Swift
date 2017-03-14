@@ -12,6 +12,7 @@ target 'TTAUtils_Swift' do
   pod 'ObjectMapper'
   pod 'FSPagerView'
   pod 'SnapKit'
+  pod 'Alamofire', '~> 4.4'
   
   # Pods for TTAUtils_Swift
 

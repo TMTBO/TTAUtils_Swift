@@ -8,6 +8,7 @@ PODS:
   - TTADataPickerView (0.1.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - FSPagerView
   - ObjectMapper
   - SnapKit
@@ -28,6 +29,6 @@ SPEC CHECKSUMS:
   SwiftNetwork: 47e0fdbc392abda6f74a21da2c0663a0c807212b
   TTADataPickerView: ae5ef48a581d2dd44a999b94190267832b4bfbd4
 
-PODFILE CHECKSUM: 3f45a90a7f2c3e9430ea68406ed3faa4d827f403
+PODFILE CHECKSUM: 406bcaf61087af3bb4222be009300940c7934458
 
 COCOAPODS: 1.2.0
