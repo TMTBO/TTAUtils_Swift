@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		703AA8413B8B0AC32A6BFC6B /* Pods_TTAUtils_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F7E36E997E1B1AD28BAD01 /* Pods_TTAUtils_Swift.framework */; };
-		790F3B911E77B583003AF340 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F3B901E77B583003AF340 /* Network.swift */; };
+		790F3B911E77B583003AF340 /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F3B901E77B583003AF340 /* NetworkTest.swift */; };
 		792632061E78E5C100B8A391 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632041E78E5C100B8A391 /* ApiManager.swift */; };
 		792632071E78E5C100B8A391 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632051E78E5C100B8A391 /* ApiResponse.swift */; };
+		792632091E78EF5500B8A391 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632081E78EF5500B8A391 /* MainService.swift */; };
 		793C57621E69460F002F7093 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57611E69460F002F7093 /* UIButton+Extension.swift */; };
 		793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57631E6946C1002F7093 /* UILabel+Extension.swift */; };
 		793C57661E69470D002F7093 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57651E69470D002F7093 /* UIImageView+Extension.swift */; };
@@ -69,9 +70,10 @@
 		2736560FCD96B35DFD530688 /* Pods-TTAUtils_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		466F2560CF23E79C6C262B31 /* Pods-TTAUtils_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_Swift/Pods-TTAUtils_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6D36BC0FF968F2A6596CDA8D /* Pods-TTAUtils_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		790F3B901E77B583003AF340 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		790F3B901E77B583003AF340 /* NetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		792632041E78E5C100B8A391 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		792632051E78E5C100B8A391 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		792632081E78EF5500B8A391 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		793C57611E69460F002F7093 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		793C57631E6946C1002F7093 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		793C57651E69470D002F7093 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		792631FE1E78E56A00B8A391 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				792632081E78EF5500B8A391 /* MainService.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				796760061E681F8000A66400 /* TTAUtils_SwiftTests.swift */,
-				790F3B901E77B583003AF340 /* Network.swift */,
+				790F3B901E77B583003AF340 /* NetworkTest.swift */,
 				796760081E681F8000A66400 /* Info.plist */,
 			);
 			path = TTAUtils_SwiftTests;
@@ -688,6 +691,7 @@
 				796760401E68222000A66400 /* NSString+Extension.swift in Sources */,
 				793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */,
 				79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */,
+				792632091E78EF5500B8A391 /* MainService.swift in Sources */,
 				796760431E68222000A66400 /* UIView+Extension.swift in Sources */,
 				793C57681E694765002F7093 /* NSBundle+Extension.swift in Sources */,
 				796760371E681FF700A66400 /* CostumViewControllers.swift in Sources */,
@@ -708,7 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				790F3B911E77B583003AF340 /* Network.swift in Sources */,
+				790F3B911E77B583003AF340 /* NetworkTest.swift in Sources */,
 				796760071E681F8000A66400 /* TTAUtils_SwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,22 +19,23 @@ public enum ApiResponseCode: Int {
 public class ApiResponse: NSObject {
     
     var request: URLRequestConvertible!
-    var code: ApiResponseCode = .success
-    var msg: String?
-    var data: Any?
-    var error: NSError?
+    var code: ApiResponseCode = Default.decaultCode
+    var msg: String? = Default.defaultMsg
+    var data: Any? = Default.defaultData
+    var error: NSError? = Default.defaultError
     
     struct Default {
         static var decaultCode = ApiResponseCode.success
         static var defaultMsg = "This is a defaultMsg"
         static var defaultData: Any? = nil
+        static var defaultError: NSError? = nil
     }
     
     public init(request: URLRequestConvertible, response: [String: Any?]?) {
         super.init()
         self.request = request
         self.code = response?["code"] as? ApiResponseCode ?? Default.decaultCode
-        self.msg = response?["msg"] as? String ?? Default.defaultMsg
+        self.msg = response?["msg"] as? String? ?? Default.defaultMsg
         self.data = response?["data"] ?? Default.defaultData
         self.error = handleResponse(response: response)
     }
@@ -44,6 +45,7 @@ public class ApiResponse: NSObject {
         self.code = ApiResponseCode(rawValue: error.code) ?? .failure
         self.msg = "Unknow error, please check the api and parameters /n \(error)"
         self.data = nil
+        self.error = error
     }
 }
 
@@ -57,12 +59,11 @@ extension ApiResponse {
         case .success:
             return error
         case .failure:
-            error = NSError(domain: self.request.urlRequest?.url?.host ?? "Unknow domain", code: code.rawValue, userInfo: response)
+            error = NSError(domain: self.request.urlRequest?.url?.host ?? "Unknow domain", code: code.rawValue, userInfo: ["response": response as Any])
             return error
         default:
             return error
         }
         
     }
-    
 }

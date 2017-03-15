@@ -9,9 +9,9 @@
 import UIKit
 import Alamofire
 
-public class ApiManager {
+class ApiManager {
     
-    public static let shared = ApiManager()
+    static let shared = ApiManager()
     
     fileprivate var sessionManager = Alamofire.SessionManager.default
     
