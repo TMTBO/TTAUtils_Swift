@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftNetwork
 import Alamofire
 
 //struct MainService: ServiceProtocol {
@@ -107,7 +106,7 @@ class Network: XCTestCase {
     func testApiProxy() {
         
         let exp = expectation(description: "NOT fulfill")
-        ApiProxy.shared.request(with: Router.createUser(parameters: [:])) { (json) in
+        ApiManager.shared.request(with: Router.createUser(parameters: [:])) { (json) in
             print(json ?? "")
             exp.fulfill()
         }
