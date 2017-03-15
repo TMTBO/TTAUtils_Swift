@@ -13,7 +13,17 @@ class ApiManager {
     
     static let shared = ApiManager()
     
-    fileprivate var sessionManager = Alamofire.SessionManager.default
+    fileprivate var sessionManager = Alamofire.SessionManager(serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies))
+    
+    static let serverTrustPolicies: [String: ServerTrustPolicy] = [
+        "127.0.0.1": .pinCertificates(
+            certificates: ServerTrustPolicy.certificates(),
+            validateCertificateChain: true,
+            validateHost: true
+        ),
+        "": .disableEvaluation
+    ]
+
     
     private init() {
         self.set("token", time: "time")

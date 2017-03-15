@@ -31,7 +31,7 @@ extension MainService {
     var method: HTTPMethod {
         switch self {
         case .createUser,
-             .readUsera : return .post
+             .readUsera : return .get
         case .readUser: return .post
         case .updateUser:  return .put
         case .destroyUser: return .delete

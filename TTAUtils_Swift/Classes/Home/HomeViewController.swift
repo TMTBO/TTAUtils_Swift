@@ -14,6 +14,7 @@ class HomeViewController: UITableViewController, BaseDataSourceProtocol {
     typealias T = String
     var groups = [[T]]()
 
+//    let refresh = UIRefreshControl()
 }
 
 // MARK: - Life Cycle
@@ -64,10 +65,11 @@ extension HomeViewController {
         automaticallyAdjustsScrollViewInsets = false
         navigationController?.navigationBar.subviews.first?.alpha = 0.0
         view.backgroundColor = .white
-        
-        show(titleView: PublicView.homeSearchButton(target: self, action: #selector(didClickHomeSearchButton(button:))))
+        title = nil
+//        show(titleView: PublicView.homeSearchButton(target: self, action: #selector(didClickHomeSearchButton(button:))))
         
         prepareTableView()
+        prepareRefreshController()
         prepareData()
     }
     
@@ -76,6 +78,16 @@ extension HomeViewController {
         tableView.tableHeaderView = BannerView(frame: CGRect(x: 0, y: 0, width: kSCREEN_WIDTH, height: 200), delegate: nil)
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCELL_IDENTIFIER)
+    }
+    
+    private func prepareRefreshController() {
+        let refresh = UIRefreshControl()
+        refresh.backgroundColor = UIColor.cyan
+        refresh.addTarget(self, action: #selector(topRefresha), for: UIControlEvents.valueChanged)
+        refresh.attributedTitle = NSAttributedString(string: "pull down to refresh")
+        refreshControl = refresh
+//        tableView.addSubview(refresh)
+        tableView.addRefresherFoot()
     }
     
     private func prepareData() {
@@ -88,6 +100,15 @@ extension HomeViewController {
 extension HomeViewController {
     @objc func didClickHomeSearchButton(button: UIButton) {
         Log(message: #function)
+    }
+    
+    @objc func topRefresha() {
+        Log(message: "topRefresh")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            Log(message: "stop")
+//            self.refresh.endRefreshing()
+            self.refreshControl?.endRefreshing()
+        }
     }
 }
 
