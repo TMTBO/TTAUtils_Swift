@@ -100,7 +100,7 @@ extension BaseDataSource {
     /// - Returns: The data of row
     internal func item(at indexPath: IndexPath) -> T {
 //        guard let items = group(at: indexPath.section) else { return nil }
-        return item[indexPath.row]
+        return group(at: indexPath.section)[indexPath.row]
     }
     
     /// Fetch the Header for current section

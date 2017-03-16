@@ -66,10 +66,9 @@ extension HomeViewController {
         navigationController?.navigationBar.subviews.first?.alpha = 0.0
         view.backgroundColor = .white
         title = nil
-//        show(titleView: PublicView.homeSearchButton(target: self, action: #selector(didClickHomeSearchButton(button:))))
+        show(titleView: PublicView.homeSearchButton(target: self, action: #selector(didClickHomeSearchButton(button:))))
         
         prepareTableView()
-        prepareRefreshController()
         prepareData()
     }
     
@@ -79,17 +78,7 @@ extension HomeViewController {
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCELL_IDENTIFIER)
     }
-    
-    private func prepareRefreshController() {
-        let refresh = UIRefreshControl()
-        refresh.backgroundColor = UIColor.cyan
-        refresh.addTarget(self, action: #selector(topRefresha), for: UIControlEvents.valueChanged)
-        refresh.attributedTitle = NSAttributedString(string: "pull down to refresh")
-        refreshControl = refresh
-//        tableView.addSubview(refresh)
-        tableView.addRefresherFoot()
-    }
-    
+   
     private func prepareData() {
         groups = [["DataPicker"]]
     }
@@ -102,14 +91,6 @@ extension HomeViewController {
         Log(message: #function)
     }
     
-    @objc func topRefresha() {
-        Log(message: "topRefresh")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            Log(message: "stop")
-//            self.refresh.endRefreshing()
-            self.refreshControl?.endRefreshing()
-        }
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -128,7 +109,6 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kCELL_IDENTIFIER, for: indexPath)
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = item(at: indexPath)
         return cell
     }
     
@@ -137,6 +117,10 @@ extension HomeViewController {
 // MARK: - UITableViewDelegate
 
 extension HomeViewController {
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.textLabel?.text = item(at: indexPath)
+    }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
