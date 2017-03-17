@@ -13,7 +13,7 @@ import UIKit
 extension UIViewController {
     
     /// Custom the view controller GLOBAL
-    open func custonViewController() {
+    open func customViewController() {
         view.backgroundColor = kDEFAULT_VIEW_BACKGROUND_COLOR
         
         navigationController?.navigationBar.isTranslucent = false

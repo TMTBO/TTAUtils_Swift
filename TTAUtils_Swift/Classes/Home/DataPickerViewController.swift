@@ -29,7 +29,7 @@ extension DataPickerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        custonViewController()
+        customViewController()
         setupUI()
     }
     

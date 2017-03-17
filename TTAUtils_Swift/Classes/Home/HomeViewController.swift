@@ -23,7 +23,7 @@ extension HomeViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        custonViewController()
+        customViewController()
         setupUI()
         
     }
