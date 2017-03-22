@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		703AA8413B8B0AC32A6BFC6B /* Pods_TTAUtils_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F7E36E997E1B1AD28BAD01 /* Pods_TTAUtils_Swift.framework */; };
+		790671A21E825A08003C27D1 /* TTAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671A11E825A08003C27D1 /* TTAWebViewController.swift */; };
+		790671A41E826EEF003C27D1 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 790671A31E826EEF003C27D1 /* Test.html */; };
+		790671A61E8283C0003C27D1 /* TTAWebViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671A51E8283C0003C27D1 /* TTAWebViewController+UI.swift */; };
+		790671A81E82844A003C27D1 /* WeakScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671A71E82844A003C27D1 /* WeakScriptMessageHandler.swift */; };
+		790671AA1E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671A91E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift */; };
+		790671AC1E82866F003C27D1 /* TTAWebViewController+WKUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671AB1E82866F003C27D1 /* TTAWebViewController+WKUIDelegate.swift */; };
+		790671AE1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790671AD1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift */; };
 		790F3B911E77B583003AF340 /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F3B901E77B583003AF340 /* NetworkTest.swift */; };
 		792632061E78E5C100B8A391 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632041E78E5C100B8A391 /* ApiManager.swift */; };
 		792632071E78E5C100B8A391 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632051E78E5C100B8A391 /* ApiResponse.swift */; };
@@ -70,6 +77,13 @@
 		2736560FCD96B35DFD530688 /* Pods-TTAUtils_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		466F2560CF23E79C6C262B31 /* Pods-TTAUtils_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_Swift/Pods-TTAUtils_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6D36BC0FF968F2A6596CDA8D /* Pods-TTAUtils_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTAUtils_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTAUtils_SwiftUITests/Pods-TTAUtils_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		790671A11E825A08003C27D1 /* TTAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAWebViewController.swift; sourceTree = "<group>"; };
+		790671A31E826EEF003C27D1 /* Test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
+		790671A51E8283C0003C27D1 /* TTAWebViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTAWebViewController+UI.swift"; sourceTree = "<group>"; };
+		790671A71E82844A003C27D1 /* WeakScriptMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakScriptMessageHandler.swift; sourceTree = "<group>"; };
+		790671A91E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTAWebViewController+WKScriptMessageHandler.swift"; sourceTree = "<group>"; };
+		790671AB1E82866F003C27D1 /* TTAWebViewController+WKUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTAWebViewController+WKUIDelegate.swift"; sourceTree = "<group>"; };
+		790671AD1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTAWebViewController+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
 		790F3B901E77B583003AF340 /* NetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		792632041E78E5C100B8A391 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		792632051E78E5C100B8A391 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
@@ -172,6 +186,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		790671A01E825991003C27D1 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				790671A11E825A08003C27D1 /* TTAWebViewController.swift */,
+				790671A51E8283C0003C27D1 /* TTAWebViewController+UI.swift */,
+				790671A91E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift */,
+				790671AD1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift */,
+				790671AB1E82866F003C27D1 /* TTAWebViewController+WKUIDelegate.swift */,
+				790671A71E82844A003C27D1 /* WeakScriptMessageHandler.swift */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
 		792631FC1E78E56A00B8A391 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +262,7 @@
 				7967604B1E68230600A66400 /* InfoPlist.strings */,
 				7967604F1E68232900A66400 /* Localizable.strings */,
 				7967601F1E681FDA00A66400 /* TTAUtils_Swift-Bridging-Header.h */,
+				790671A31E826EEF003C27D1 /* Test.html */,
 			);
 			path = TTAUtils_Swift;
 			sourceTree = "<group>";
@@ -307,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				7967602F1E681FF700A66400 /* GlobalFunctions.swift */,
+				790671A01E825991003C27D1 /* WebViewController */,
 				792631FC1E78E56A00B8A391 /* Network */,
 				796760511E6828AC00A66400 /* CycleView */,
 				7967603B1E68222000A66400 /* Category */,
@@ -511,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790671A41E826EEF003C27D1 /* Test.html in Resources */,
 				79675FFC1E681F8000A66400 /* LaunchScreen.storyboard in Resources */,
 				7967604D1E68232900A66400 /* Localizable.strings in Resources */,
 				796760491E68230600A66400 /* InfoPlist.strings in Resources */,
@@ -688,16 +718,22 @@
 				796760411E68222000A66400 /* UIColor+Extension.swift in Sources */,
 				792632061E78E5C100B8A391 /* ApiManager.swift in Sources */,
 				79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */,
+				790671A21E825A08003C27D1 /* TTAWebViewController.swift in Sources */,
 				796760401E68222000A66400 /* NSString+Extension.swift in Sources */,
+				790671A61E8283C0003C27D1 /* TTAWebViewController+UI.swift in Sources */,
 				793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */,
 				79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */,
+				790671A81E82844A003C27D1 /* WeakScriptMessageHandler.swift in Sources */,
 				792632091E78EF5500B8A391 /* MainService.swift in Sources */,
 				796760431E68222000A66400 /* UIView+Extension.swift in Sources */,
+				790671AC1E82866F003C27D1 /* TTAWebViewController+WKUIDelegate.swift in Sources */,
 				793C57681E694765002F7093 /* NSBundle+Extension.swift in Sources */,
 				796760371E681FF700A66400 /* CostumViewControllers.swift in Sources */,
 				796760211E681FDB00A66400 /* AppDelegate.swift in Sources */,
 				796760341E681FF700A66400 /* HomeViewController.swift in Sources */,
+				790671AA1E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift in Sources */,
 				79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */,
+				790671AE1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift in Sources */,
 				79E985D91E72D4CD00D76A95 /* SelectView.swift in Sources */,
 				79E985D21E72D4CD00D76A95 /* BaseProtocol.swift in Sources */,
 				7967603A1E681FF700A66400 /* LanguageTool.swift in Sources */,

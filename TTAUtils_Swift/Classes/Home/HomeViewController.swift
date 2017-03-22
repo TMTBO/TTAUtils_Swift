@@ -11,10 +11,7 @@ import UIKit
 let kCELL_IDENTIFIER = "cellIdentifier"
 
 class HomeViewController: UITableViewController, BaseDataSourceProtocol {
-    typealias T = String
-    var groups = [[T]]()
-
-//    let refresh = UIRefreshControl()
+    var groups = [[String]]()
 }
 
 // MARK: - Life Cycle
@@ -80,7 +77,7 @@ extension HomeViewController {
     }
    
     private func prepareData() {
-        groups = [["DataPicker"]]
+        groups = [["DataPicker", "TTAWebViewController"]]
     }
 }
 
@@ -133,6 +130,8 @@ extension HomeViewController {
         var vc: UIViewController?
         if indexPath.row == 0 {
             vc = DataPickerViewController()
+        } else if indexPath.row == 1 {
+            vc = TTAWebViewController(jsCalled: ["test"])
         }
         guard let newVc = vc else { return }
         vc?.hidesBottomBarWhenPushed = true

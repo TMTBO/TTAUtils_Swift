@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <script>
+        // Did click wechat_pay button
+        function js_call_ios() {
+            document.getElementById("showLabel").textContent = "Clicked test Button";
+            window.webkit.messageHandlers.test.postMessage({"sp_id": "1", "ios_product_id": "com.wrq.product.6", "num": 4});
+        }
+
+        // get wechat pay status
+        function ios_call_js(para1, para2) {
+            document.getElementById("showLabel").textContent = para1 + para2;
+        }
+    </script>
+
+    <style type="text/css">
+    	#main {
+    		width: 100%;
+    		height: 500px;
+    		background-color: red
+    	}
+    	#testButton {
+    		width: 150px;
+    		height: 50px;
+            margin-top: 50px;
+    		align-self: center;
+    		background-color: lightblue;
+    	}
+        #showLabel {
+            width: 100%;
+            height: 50;
+            align-content: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <label>   1 </label><br>
+    <label>   2 </label><br>
+    <label>   3 </label><br>
+    <label>   4 </label><br>
+    <label>   5 </label><br>
+    <div id="main">
+        <label id="showLabel">This is a test Label</label><br>
+        <button id="testButton" onclick=js_call_ios()>TestButton</button>
+    </div>
+</body>
+</html>

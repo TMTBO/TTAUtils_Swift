@@ -44,7 +44,7 @@ extension CategoryViewController {
         let button = UIButton(title: "Hello world")
         button.setBackgroundImage(UIImage.image(color: .orange), for: .normal)
         button.setImage(UIImage.image(color: .red, size: CGSize(width: 50, height: 50)), for: .normal)
-        button.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         button.center = view.center
         button.tag = 0
         button.addTarget(self, action: #selector(didClickButton(button:)), for: .touchUpInside)

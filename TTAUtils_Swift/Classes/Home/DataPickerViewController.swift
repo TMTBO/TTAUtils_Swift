@@ -11,7 +11,7 @@ import TTADataPickerView
 
 class DataPickerViewController: UIViewController {
     
-    let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .dateTime)
+    let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .dateTime, delegate: nil)
     
     deinit {
         Log(message: "\(NSStringFromClass(type(of: self))) deinit")
