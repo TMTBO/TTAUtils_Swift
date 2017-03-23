@@ -10,7 +10,7 @@ import UIKit
 
 // Mark: - Debug
 
-func Log<T>(message: T, file: String = #file, method: String = #function, line: Int = #line) {
+func Log<T>(message: T..., file: String = #file, method: String = #function, line: Int = #line) {
     #if DEBUG
         print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
     #endif
