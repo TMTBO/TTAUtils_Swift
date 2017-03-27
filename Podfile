@@ -15,6 +15,8 @@ target 'TTAUtils_Swift' do
   pod 'Alamofire'
   pod 'ESPullToRefresh'
   
+  pod 'PKHUD'
+  
   # Pods for TTAUtils_Swift
 
   target 'TTAUtils_SwiftTests' do

@@ -62,7 +62,6 @@ extension HomeViewController {
         automaticallyAdjustsScrollViewInsets = false
         navigationController?.navigationBar.subviews.first?.alpha = 0.0
         view.backgroundColor = .white
-        title = nil
         show(titleView: PublicView.homeSearchButton(target: self, action: #selector(didClickHomeSearchButton(button:))))
         
         prepareTableView()
@@ -131,7 +130,9 @@ extension HomeViewController {
         if indexPath.row == 0 {
             vc = DataPickerViewController()
         } else if indexPath.row == 1 {
-            vc = TTAWebViewController(jsCalled: ["test"])
+            let avc = TTAWebViewController(url: URL(string: "https://www.baidu.com"))
+            avc.canSwipeBack = false
+            vc = avc
         }
         guard let newVc = vc else { return }
         vc?.hidesBottomBarWhenPushed = true
