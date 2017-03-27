@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PKHUD
+import ESPullToRefresh
 
 class HudProgressTableViewController: UITableViewController, BaseDataSourceProtocol {
 
@@ -26,7 +26,21 @@ class HudProgressTableViewController: UITableViewController, BaseDataSourceProto
         
         customViewController()
         
+        view.backgroundColor = .white
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.es_addPullToRefresh {
+            Log(message: "pulltorefresh")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
+                self?.tableView.es_stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
+            })
+        }
+        tableView.es_addInfiniteScrolling {
+            Log(message: "addinfinite")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
+                self?.tableView.es_noticeNoMoreData()
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +93,7 @@ extension HudProgressTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let type = HUDType(rawValue: indexPath.row) else { return }
+        
         switch type {
         case .success:
             TTAHUD.show(.success)

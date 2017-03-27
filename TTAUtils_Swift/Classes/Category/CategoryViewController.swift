@@ -48,6 +48,7 @@ extension CategoryViewController {
         button.center = view.center
         button.tag = 0
         button.addTarget(self, action: #selector(didClickButton(button:)), for: .touchUpInside)
+        
         view.addSubview(button)
     }
     

@@ -10,7 +10,6 @@ import UIKit
 
 extension UIImageView {
     
-    
     /// add the sd_webimage code here
     public func tta_setImageWithURL(url: URL?, placeholderImage: UIImage?) {
         
