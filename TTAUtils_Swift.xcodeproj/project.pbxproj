@@ -24,6 +24,8 @@
 		793C57661E69470D002F7093 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57651E69470D002F7093 /* UIImageView+Extension.swift */; };
 		793C57681E694765002F7093 /* NSBundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57671E694765002F7093 /* NSBundle+Extension.swift */; };
 		793C576A1E6947C0002F7093 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57691E6947C0002F7093 /* NSDate+Extension.swift */; };
+		795A65801E88FE020003071A /* HudProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A657F1E88FE020003071A /* HudProgressTableViewController.swift */; };
+		795A65831E8902040003071A /* TTAHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A65821E8902040003071A /* TTAHUD.swift */; };
 		79675FF91E681F8000A66400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79675FF81E681F8000A66400 /* Assets.xcassets */; };
 		79675FFC1E681F8000A66400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79675FFA1E681F8000A66400 /* LaunchScreen.storyboard */; };
 		796760071E681F8000A66400 /* TTAUtils_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796760061E681F8000A66400 /* TTAUtils_SwiftTests.swift */; };
@@ -93,6 +95,8 @@
 		793C57651E69470D002F7093 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		793C57671E694765002F7093 /* NSBundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Extension.swift"; sourceTree = "<group>"; };
 		793C57691E6947C0002F7093 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		795A657F1E88FE020003071A /* HudProgressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudProgressTableViewController.swift; sourceTree = "<group>"; };
+		795A65821E8902040003071A /* TTAHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAHUD.swift; sourceTree = "<group>"; };
 		79675FEE1E681F8000A66400 /* TTAUtils_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTAUtils_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79675FF81E681F8000A66400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79675FFB1E681F8000A66400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -225,6 +229,14 @@
 			path = ApiManager;
 			sourceTree = "<group>";
 		};
+		795A65811E8901F00003071A /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				795A65821E8902040003071A /* TTAHUD.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		79675FE51E681F8000A66400 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +331,7 @@
 			children = (
 				796760281E681FF700A66400 /* HomeViewController.swift */,
 				79E985DA1E72FB3500D76A95 /* DataPickerViewController.swift */,
+				795A657F1E88FE020003071A /* HudProgressTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -335,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				7967602F1E681FF700A66400 /* GlobalFunctions.swift */,
+				795A65811E8901F00003071A /* HUD */,
 				790671A01E825991003C27D1 /* WebViewController */,
 				792631FC1E78E56A00B8A391 /* Network */,
 				796760511E6828AC00A66400 /* CycleView */,
@@ -712,6 +726,7 @@
 				796760361E681FF700A66400 /* CostumConfiguration.swift in Sources */,
 				796760381E681FF700A66400 /* MainTabBarController.swift in Sources */,
 				796760331E681FF700A66400 /* CategoryViewController.swift in Sources */,
+				795A65831E8902040003071A /* TTAHUD.swift in Sources */,
 				793C57621E69460F002F7093 /* UIButton+Extension.swift in Sources */,
 				792632071E78E5C100B8A391 /* ApiResponse.swift in Sources */,
 				793C576A1E6947C0002F7093 /* NSDate+Extension.swift in Sources */,
@@ -722,6 +737,7 @@
 				796760401E68222000A66400 /* NSString+Extension.swift in Sources */,
 				790671A61E8283C0003C27D1 /* TTAWebViewController+UI.swift in Sources */,
 				793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */,
+				795A65801E88FE020003071A /* HudProgressTableViewController.swift in Sources */,
 				79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */,
 				790671A81E82844A003C27D1 /* WeakScriptMessageHandler.swift in Sources */,
 				792632091E78EF5500B8A391 /* MainService.swift in Sources */,

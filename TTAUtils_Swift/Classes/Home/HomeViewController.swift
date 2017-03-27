@@ -76,7 +76,7 @@ extension HomeViewController {
     }
    
     private func prepareData() {
-        groups = [["DataPicker", "TTAWebViewController"]]
+        groups = [["DataPicker", "TTAWebViewController", "HUD"]]
     }
 }
 
@@ -133,7 +133,10 @@ extension HomeViewController {
             let avc = TTAWebViewController(url: URL(string: "https://www.baidu.com"))
             avc.canSwipeBack = false
             vc = avc
+        } else if indexPath.row == 2 {
+            vc = HudProgressTableViewController()
         }
+        vc?.title = item(at: indexPath)
         guard let newVc = vc else { return }
         vc?.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newVc, animated: true)
