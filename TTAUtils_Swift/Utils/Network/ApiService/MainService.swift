@@ -38,8 +38,6 @@ extension MainService {
             
             
             
-//        default:
-//            fatalError("This REQUEST's METHOD has NOT been defined, please chack it")
         }
     }
 }
@@ -59,8 +57,6 @@ extension MainService {
             return "/users/\(username)"
         case .destroyUser(let username):
             return "/users/\(username)"
-//        default:
-//            fatalError("This REQUEST's PATH has NOT been handled, please chack it")
         }
     }
 }

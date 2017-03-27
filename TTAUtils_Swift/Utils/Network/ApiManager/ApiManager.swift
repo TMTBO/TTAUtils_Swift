@@ -31,6 +31,7 @@ class ApiManager {
     
     private var dispatchTable = [Int: DataRequest]()
     
+    /// Set Token and Time for the request header
     open func set(_ token: String?, time: String?) {
         var defaultHeaders = SessionManager.defaultHTTPHeaders
         defaultHeaders["token"] = token
@@ -41,6 +42,7 @@ class ApiManager {
         self.sessionManager = sessionManager
     }
     
+    /// Api Request
     open func request(with request: URLRequestConvertible, completionHandler: @escaping (ApiResponse?) -> Void) {
         if let _ = dispatchTable[request.urlRequest?.hashValue ?? 0] { return }
         let dataRequest = sessionManager.request(request).responseJSON(completionHandler: { (response) in
@@ -58,6 +60,37 @@ class ApiManager {
             }
         })
         dispatchTable[dataRequest.request?.hashValue ?? 0] = dataRequest
+    }
+    
+    /// Upload Images
+    open func upload(with request: URLRequestConvertible, images: [UIImage], completionHandler: @escaping (ApiResponse?) -> Void) {
+        if let _ = dispatchTable[request.urlRequest?.hashValue ?? 0] { return }
+        sessionManager.upload(multipartFormData: { (multipartFormData) in
+            _ = images.enumerated().map({ (item) in
+                guard let data = UIImagePNGRepresentation(item.element) else { return }
+                multipartFormData.append(data, withName: "img_\(item.offset)")
+            })
+        }, with: request) { (encodingResult) in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                }).responseJSON { response in
+                    self.dispatchTable.removeValue(forKey: request.urlRequest?.hashValue ?? 0)
+                    self.logSuccess(request: request)
+                    let apiResponse = ApiResponse(request: request, response: response.result.value as? [String: Any?])
+                    completionHandler(apiResponse)
+                }
+                self.dispatchTable.removeValue(forKey: request.urlRequest?.hashValue ?? 0)
+            case .failure(let encodingError):
+                self.dispatchTable.removeValue(forKey: request.urlRequest?.hashValue ?? 0)
+                self.logFailure(request: request, error: encodingError)
+                let apiErrorResponse = ApiResponse(request: request, error: encodingError as NSError)
+                completionHandler(apiErrorResponse)
+                self.dispatchTable.removeValue(forKey: request.urlRequest?.hashValue ?? 0)
+            }
+        }
+        dispatchTable[request.urlRequest?.hashValue ?? 0] = request as? DataRequest
     }
 }
 
