@@ -42,8 +42,8 @@ extension CategoryViewController {
     
     private func testUIButtonLayoutType() {
         let button = UIButton(title: "Hello world")
-        button.setBackgroundImage(UIImage.image(color: .orange), for: .normal)
-        button.setImage(UIImage.image(color: .red, size: CGSize(width: 50, height: 50)), for: .normal)
+        button.setBackgroundImage(UIImage.ttaClass.image(color: .orange), for: .normal)
+        button.setImage(UIImage.ttaClass.image(color: .red, size: CGSize(width: 50, height: 50)), for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         button.center = view.center
         button.tag = 0
@@ -56,8 +56,8 @@ extension CategoryViewController {
         var tag = button.tag
         tag += 1
         button.tag = tag > 7 ? 0 : tag
-        button.layoutType = UIButtonLayoutType(rawValue: tag) ?? .default
-        button.layoutTypePadding = CGFloat(button.layoutTypePadding) + CGFloat(5)
+        button.tta.layoutType = UIButtonLayoutType(rawValue: tag) ?? .default
+        button.tta.layoutTypePadding = CGFloat(button.tta.layoutTypePadding) + CGFloat(5)
 //        button.setLayoutType(type: UIButtonLayoutType(rawValue: tag) ?? .default, padding: 20)
     }
     

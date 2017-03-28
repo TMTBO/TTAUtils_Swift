@@ -21,7 +21,7 @@ class SelectView: UIView {
     
     fileprivate let tipLabel = UILabel(title: "Hello", titleColor: .darkGray, font: UIFont.systemFont(ofSize: 14), alignment: .left)
     fileprivate let itemLabel = UILabel(title: TTALocalizedString("all"), titleColor: .darkGray, font: UIFont.systemFont(ofSize: 14), alignment: .right)
-    fileprivate let iconImageView = UIImageView(image: UIImage.image(color: .darkGray, size: CGSize(width: 10, height: 10)))
+    fileprivate let iconImageView = UIImageView(image: UIImage.ttaClass.image(color: .darkGray, size: CGSize(width: 10, height: 10)))
     
     fileprivate var selectItems = [String]()
     
@@ -66,7 +66,7 @@ extension SelectView {
         tipLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(15 * kSCALE)
             make.centerY.equalTo(self)
-            make.width.equalTo(tipLabel.text?.width(withFont: tipLabel.font, containerSize: CGSize(width: 150, height: 30)) ?? 150)
+            make.width.equalTo(tipLabel.text?.tta.width(withFont: tipLabel.font, containerSize: CGSize(width: 150, height: 30)) ?? 150)
         }
     }
     
@@ -86,10 +86,7 @@ extension SelectView {
     }
     
     private func _configViews() {
-        addTapGesture { (_) in
-            guard let _ = self.delegate?.responds(to: #selector(SelectViewDelegate.didSelect(selectView:))) else { return }
-            self.delegate?.didSelect(selectView: self)
-        }
+        tta.addTapGesture(self, action: #selector(tapGesture(tap:)))
     }
     
     private func _layoutViews() {
@@ -103,5 +100,11 @@ extension SelectView {
             make.centerY.equalTo(tipLabel)
             make.size.equalTo(CGSize(width: 10, height: 10))
         }
+    }
+}
+
+extension SelectView {
+    @objc func tapGesture(tap: UITapGestureRecognizer) {
+        self.delegate?.didSelect(selectView: self)
     }
 }

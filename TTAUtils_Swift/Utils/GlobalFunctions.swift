@@ -12,7 +12,7 @@ import UIKit
 
 func Log<T>(message: T..., file: String = #file, method: String = #function, line: Int = #line) {
     #if DEBUG
-        print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
+        print("\((file as NSString).lastPathComponent) [line: \(line)], \(method): \(message)")
     #endif
 }
 

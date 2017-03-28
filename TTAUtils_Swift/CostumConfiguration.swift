@@ -12,7 +12,7 @@ import UIKit
 // MARK:- Color
 
 /** 默认 菊色 */
-let kDEFAULT_ORANGE_COLOR = UIColor.hex(hex: 0xfc6054)
+let kDEFAULT_ORANGE_COLOR = UIColor.ttaClass.hex(hex: 0xfc6054)
 /** 默认导航栏颜色 */
 let kNAVIGATION_BAR_COLOR =  kDEFAULT_ORANGE_COLOR
 /** 默认 view 背景颜色 */

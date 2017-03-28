@@ -9,10 +9,11 @@ target 'TTAUtils_Swift' do
 #  pod 'SwiftNetwork', :path => '/Users/tobyotenma/Developer/Git/GitHub/SwiftNetwork'
   
   
-  pod 'ObjectMapper'
-  pod 'FSPagerView'
   pod 'SnapKit'
   pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'Kingfisher'
+  pod 'FSPagerView'
   pod 'ESPullToRefresh'
   
   pod 'PKHUD'

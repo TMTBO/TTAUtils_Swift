@@ -46,19 +46,7 @@ extension DataPickerViewController {
     fileprivate func setupUI() {
 //        view.addSubview(picker)
         
-        view.addTapGesture { (_) in
-            if self.picker.type == .text {
-                let titles = self.title?.components(separatedBy: " ")
-                self.picker.selectedTitles(titles, animated: true)
-            } else {
-                self.picker.selectedDate(Date())
-            }
-            self.picker.show()
-            
-            
-//            let vc = TTADataPickerViewController()
-//            self.present(vc, animated: true, completion: nil)
-        }
+        view.tta.addTapGesture(self, action: #selector(tapGesture(tap:)))
         TTADataPickerView.appearance().setConfirmButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.blue])
         TTADataPickerView.appearance().setCancelButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.red])
         TTADataPickerView.appearance().setToolBarTintColor(color: .orange)
@@ -67,6 +55,20 @@ extension DataPickerViewController {
         picker.type = .date
         picker.delegate = self
         picker.textItemsForComponent = [["hello", "hello", "hello", "hello", "hello", "world", "hello"], ["world", "world", "world", "world", "hello", "world", "world"], ["yeah", "ooooh"]]
+    }
+}
+
+// MARK: - Action
+
+extension DataPickerViewController {
+    @objc func tapGesture(tap: UITapGestureRecognizer) {
+        if self.picker.type == .text {
+            let titles = self.title?.components(separatedBy: " ")
+            self.picker.selectedTitles(titles, animated: true)
+        } else {
+            self.picker.selectedDate(Date())
+        }
+        self.picker.show()
     }
 }
 

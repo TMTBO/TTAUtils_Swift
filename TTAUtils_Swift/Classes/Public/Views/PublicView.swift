@@ -20,7 +20,7 @@ class PublicView: UIView {
         let rect = CGRect(x: 0, y: 0, width: 200, height: 44)
         let searchButton = UIButton()
         searchButton.adjustsImageWhenHighlighted = false
-        searchButton.setBackgroundImage(UIImage.image(color: UIColor.red, size: rect.size), for: UIControlState.normal)
+        searchButton.setBackgroundImage(UIImage.ttaClass.image(color: UIColor.red, size: rect.size), for: UIControlState.normal)
         searchButton.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
         searchButton.frame = rect
         return searchButton

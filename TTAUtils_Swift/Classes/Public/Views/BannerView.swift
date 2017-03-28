@@ -98,7 +98,7 @@ extension BannerView: FSPagerViewDataSource {
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: kBANNER_VIEW_CELL_IDENTIFIER, at: index)
         let url = URL(string: models?[index].image ?? "")
-        cell.imageView?.tta_setImageWithURL(url: url, placeholderImage: UIImage(named: ""))
+        cell.imageView?.tta.setImage(with: url, placeholder: UIImage(named: ""))
 //        cell.textLabel?.text = models?[index].title
         return cell
     }

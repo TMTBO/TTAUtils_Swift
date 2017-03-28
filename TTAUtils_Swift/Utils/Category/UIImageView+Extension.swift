@@ -7,11 +7,28 @@
 //
 
 import UIKit
+import Kingfisher
 
-extension UIImageView {
+extension TTAUtils where Base: UIImageView {
     
-    /// add the sd_webimage code here
-    public func tta_setImageWithURL(url: URL?, placeholderImage: UIImage?) {
-        
+    /// add the sd_webimage or kingfisher code here
+    public func setImage(with resource: Resource?,
+                         placeholder: Image? = nil,
+                         options: KingfisherOptionsInfo? = nil,
+                         progressBlock: DownloadProgressBlock? = nil,
+                         completionHandler: CompletionHandler? = nil) {
+        base.setImage(with: resource, placeholder: placeholder, options: options, progressBlock: progressBlock, completionHandler: completionHandler)
+    }
+}
+
+fileprivate extension UIImageView {
+    
+    /// add the sd_webimage or kingfisher code here
+    func setImage(with resource: Resource?,
+                         placeholder: Image? = nil,
+                         options: KingfisherOptionsInfo? = nil,
+                         progressBlock: DownloadProgressBlock? = nil,
+                         completionHandler: CompletionHandler? = nil) {
+        kf.setImage(with: resource, placeholder: placeholder, options: options, progressBlock: progressBlock, completionHandler: completionHandler)
     }
 }
