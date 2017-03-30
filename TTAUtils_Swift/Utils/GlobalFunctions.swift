@@ -28,8 +28,8 @@ let kSCALE = (kSCREEN_WIDTH / 375)
 // MARK: - Convert Degrees and Radian
 
 func Degrees_TO_Radian(degrees: Double) -> Double {
-    return M_PI * degrees / 180.0
+    return Double.pi * degrees / 180.0
 }
 func Radian_TO_Degrees(radian: Double) -> Double {
-    return 180.0 * radian / M_PI
+    return 180.0 * radian / Double.pi
 }

@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 
+typealias TTAURLRequestConvertible = URLRequestConvertible
+
 class ApiManager {
     
     static let shared = ApiManager()
@@ -43,7 +45,7 @@ class ApiManager {
     }
     
     /// Api Request
-    open func request(with request: URLRequestConvertible, completionHandler: @escaping (ApiResponse?) -> Void) {
+    open func request(with request: TTAURLRequestConvertible, completionHandler: @escaping (ApiResponse?) -> Void) {
         if let _ = dispatchTable[request.urlRequest?.hashValue ?? 0] { return }
         let dataRequest = sessionManager.request(request).responseJSON(completionHandler: { (response) in
             switch response.result {
@@ -63,7 +65,7 @@ class ApiManager {
     }
     
     /// Upload Images
-    open func upload(with request: URLRequestConvertible, images: [UIImage], completionHandler: @escaping (ApiResponse?) -> Void) {
+    open func upload(with request: TTAURLRequestConvertible, images: [UIImage], completionHandler: @escaping (ApiResponse?) -> Void) {
         if let _ = dispatchTable[request.urlRequest?.hashValue ?? 0] { return }
         sessionManager.upload(multipartFormData: { (multipartFormData) in
             _ = images.enumerated().map({ (item) in
@@ -96,20 +98,20 @@ class ApiManager {
 
 extension ApiManager {
     
-    fileprivate func logSuccess(request: URLRequestConvertible) {
+    fileprivate func logSuccess(request: TTAURLRequestConvertible) {
         #if DEBUG
             print("\n===================== Response Success =====================")
-            print("\n \(request.urlRequest?.url?.absoluteString) ")
-            print("\n \(sessionManager.session.configuration.httpAdditionalHeaders) ")
+            print("\n \(String(describing: request.urlRequest?.url?.absoluteString)) ")
+            print("\n \(String(describing: sessionManager.session.configuration.httpAdditionalHeaders)) ")
             print("\n===================== Response Success =====================\n")
         #endif
     }
     
-    fileprivate func logFailure(request: URLRequestConvertible, error: Error) {
+    fileprivate func logFailure(request: TTAURLRequestConvertible, error: Error) {
         #if DEBUG
             print("\n===================== Response Failure =====================")
-            print("\n \(request.urlRequest?.url?.absoluteString) ")
-            print("\n \(sessionManager.session.configuration.httpAdditionalHeaders) ")
+            print("\n \(String(describing: request.urlRequest?.url?.absoluteString)) ")
+            print("\n \(String(describing: sessionManager.session.configuration.httpAdditionalHeaders)) ")
             print("\n===================== Error =====================")
             print("\n \(error) ");
             print("\n===================== Response Failure =====================\n")

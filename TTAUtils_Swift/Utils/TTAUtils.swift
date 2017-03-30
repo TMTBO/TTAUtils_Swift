@@ -16,7 +16,7 @@ public final class TTAUtils<Base> {
     }
 }
 
-/// A type that has Kingfisher extensions.
+/// A type that has TTAUtils extensions.
 
 public protocol TTAUtilsCompatiable {
     
