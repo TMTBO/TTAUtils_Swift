@@ -12,7 +12,12 @@ import UIKit
 
 func Log<T>(_ message: T..., file: String = #file, line: Int = #line, method: String = #function) {
     #if DEBUG
-        print("🕐 \(Date()) \(String((file as NSString).lastPathComponent.characters.dropLast(6))) [line: \(line)], \(method): \(message)")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        let dateString = formatter.string(from: Date())
+        let fileName = String((file as NSString).lastPathComponent.characters.dropLast(6))
+        let messageString = String(describing: message)
+        print("🕐", "->\(dateString)|", "<\(fileName)>", "[line: \(line)]", "{\(method)}:", messageString)
     #endif
 }
 
