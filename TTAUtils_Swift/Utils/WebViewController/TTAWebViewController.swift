@@ -69,7 +69,7 @@ class TTAWebViewController: UIViewController {
         webView.uiDelegate = nil
         webView.navigationDelegate = nil
         webView.removeObserver(self, forKeyPath: NSStringFromSelector(#selector(getter: WKWebView.estimatedProgress)))
-        Log(message: "\(NSStringFromClass(type(of: self))) deinit")
+        Log("\(NSStringFromClass(type(of: self))) deinit")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

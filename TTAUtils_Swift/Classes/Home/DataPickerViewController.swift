@@ -14,7 +14,7 @@ class DataPickerViewController: UIViewController {
     let picker = TTADataPickerView(title: "jhfakdhskjahf", type: .dateTime, delegate: nil)
     
     deinit {
-        Log(message: "\(NSStringFromClass(type(of: self))) deinit")
+        Log("\(NSStringFromClass(type(of: self))) deinit")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -84,7 +84,8 @@ extension HomeViewController {
 
 extension HomeViewController {
     @objc func didClickHomeSearchButton(button: UIButton) {
-        Log(message: #function)
+        Log(#function)
+        LogFunction()
     }
     
 }

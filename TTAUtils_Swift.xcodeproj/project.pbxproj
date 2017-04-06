@@ -48,6 +48,7 @@
 		796760431E68222000A66400 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967603F1E68222000A66400 /* UIView+Extension.swift */; };
 		796760491E68230600A66400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604B1E68230600A66400 /* InfoPlist.strings */; };
 		7967604D1E68232900A66400 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604F1E68232900A66400 /* Localizable.strings */; };
+		797C072C1E95DAB90007D828 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C072B1E95DAB90007D828 /* Log.swift */; };
 		79E985D21E72D4CD00D76A95 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */; };
 		79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C51E72D4CD00D76A95 /* BannerModel.swift */; };
 		79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985CE1E72D4CD00D76A95 /* BannerView.swift */; };
@@ -131,6 +132,7 @@
 		7967604C1E68230900A66400 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		7967604E1E68232900A66400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		796760501E68232B00A66400 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		797C072B1E95DAB90007D828 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		79E985C51E72D4CD00D76A95 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		79E985CE1E72D4CD00D76A95 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			children = (
 				7967602F1E681FF700A66400 /* GlobalFunctions.swift */,
 				791DC24D1E8A1A880054967B /* TTAUtils.swift */,
+				797C072A1E95DA9B0007D828 /* Log */,
 				795A65811E8901F00003071A /* HUD */,
 				790671A01E825991003C27D1 /* WebViewController */,
 				792631FC1E78E56A00B8A391 /* Network */,
@@ -393,6 +396,14 @@
 			children = (
 			);
 			path = CycleView;
+			sourceTree = "<group>";
+		};
+		797C072A1E95DA9B0007D828 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				797C072B1E95DAB90007D828 /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		79E985C01E72D4CD00D76A95 /* Public */ = {
@@ -729,6 +740,7 @@
 			files = (
 				796760321E681FF700A66400 /* CartViewController.swift in Sources */,
 				791DC2491E8A1A800054967B /* Bundle+Extension.swift in Sources */,
+				797C072C1E95DAB90007D828 /* Log.swift in Sources */,
 				796760421E68222000A66400 /* UIImage+Extension.swift in Sources */,
 				796760361E681FF700A66400 /* CostumConfiguration.swift in Sources */,
 				796760381E681FF700A66400 /* MainTabBarController.swift in Sources */,

@@ -14,7 +14,7 @@ class HudProgressTableViewController: UITableViewController, BaseDataSourceProto
     var groups: [[String]] = [["success", "error", "progress", "image(UIImage?)", "rotatingImage(UIImage?)", "labeledSuccess", "labeledError", "labeledProgress", "labeledImage", "labeledRotatingImage", "label", "systemActivity"]]
     
     deinit {
-        Log(message: "\(NSStringFromClass(type(of: self))) deinit")
+        Log("\(NSStringFromClass(type(of: self))) deinit")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,13 +30,13 @@ class HudProgressTableViewController: UITableViewController, BaseDataSourceProto
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         tableView.es_addPullToRefresh {
-            Log(message: "pulltorefresh")
+            Log("pulltorefresh")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
                 self?.tableView.es_stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
             })
         }
         tableView.es_addInfiniteScrolling {
-            Log(message: "addinfinite")
+            Log("addinfinite")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
                 self?.tableView.es_noticeNoMoreData()
             })

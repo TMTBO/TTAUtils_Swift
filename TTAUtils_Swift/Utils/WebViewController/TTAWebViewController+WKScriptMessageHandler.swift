@@ -20,11 +20,11 @@ extension TTAWebViewController: WKScriptMessageHandler {
         guard let amessage = ScriptMessages(rawValue: message.name) else { return }
         switch amessage {
         case .test:
-            Log(message: message.body)
+            Log(message.body)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
                 let prama = "Hello"
                 self.webView.evaluateJavaScript("ios_call_js('\(prama)', 'World')", completionHandler: { (item, error) in
-                    Log(message: item, error)
+                    Log(item, error)
                 })
             })
         }

@@ -10,9 +10,9 @@ import UIKit
 
 // Mark: - Debug
 
-func Log<T>(message: T..., file: String = #file, method: String = #function, line: Int = #line) {
+func Log<T>(_ message: T..., file: String = #file, line: Int = #line, method: String = #function) {
     #if DEBUG
-        print("\((file as NSString).lastPathComponent) [line: \(line)], \(method): \(message)")
+        print("🕐 \(Date()) \(String((file as NSString).lastPathComponent.characters.dropLast(6))) [line: \(line)], \(method): \(message)")
     #endif
 }
 
