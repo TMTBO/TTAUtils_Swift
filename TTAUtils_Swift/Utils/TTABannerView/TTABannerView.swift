@@ -93,7 +93,7 @@ class TTABannerView: UIView {
     
     
     // MARK: - Private Properties
-    
+    fileprivate let layout = UICollectionViewFlowLayout()
     fileprivate let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     fileprivate let pageControl = UIPageControl()
     fileprivate let backGroundImageView = UIImageView()
@@ -103,10 +103,11 @@ class TTABannerView: UIView {
     fileprivate var images: [String] = [] {
         willSet {
             let imageCount = newValue.count
+            guard imageCount != 0 else { return }
             totalItemCount = imageCount * TTABannerViewConst.countMultiple
             pageControl.numberOfPages = imageCount
             collectionView.reloadData()
-            backGroundImageView.isHidden = imageCount == 0
+            backGroundImageView.isHidden = !(imageCount == 0)
             pageControl.isHidden = !isShowPageControl
             if isAutoScroll {
                 addTimer()
@@ -124,24 +125,29 @@ class TTABannerView: UIView {
         setupUI()
     }
     
+    deinit {
+        collectionView.dataSource = nil
+        collectionView.delegate = nil
+    }
+    
 }
 
 // MARK: - Public Method
 
 extension TTABannerView {
     
-    convenience init(_ frame: CGRect, isRepeat: Bool, imageNames: [String]) {
+    convenience init(_ frame: CGRect, imageNames: [String], isRepeat: Bool) {
         self.init(frame: frame)
         self.isRepeat = isRepeat
     }
     
-    convenience init(_ frame: CGRect, imageURLStrings: [String], delegate: TTABannerViewDelegate) {
+    convenience init(_ frame: CGRect, imageURLStrings: [String], delegate: TTABannerViewDelegate?) {
         self.init(frame: frame)
         self.imageURLStrings = imageURLStrings
         self.delegate = delegate
     }
     
-    convenience init(_ frame: CGRect, placeholderImage: UIImage?, delegate: TTABannerViewDelegate) {
+    convenience init(_ frame: CGRect, placeholderImage: UIImage?, delegate: TTABannerViewDelegate?) {
         self.init(frame: frame)
         self.delegate = delegate
         self.placeholderImage = placeholderImage
@@ -166,9 +172,19 @@ extension TTABannerView {
     override func layoutSubviews() {
         super.layoutSubviews()
         _layoutViews()
+        layout.itemSize = bounds.size
         if collectionView.contentOffset.x == 0 && totalItemCount != 0 {
             let targetIndex = isRepeat ? totalItemCount / 2 : 0
             collectionView.scrollToItem(at: IndexPath(item: targetIndex, section: 0), at: .left, animated: false)
+        }
+    }
+    
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
+        if newWindow != nil, images.count > 0 {
+            addTimer()
+        } else {
+            removeTimer()
         }
     }
     
@@ -180,6 +196,7 @@ fileprivate extension TTABannerView {
     
     func setupUI() {
         _addViews()
+        _prepareLayout()
         _configViews()
         _layoutViews()
     }
@@ -194,7 +211,7 @@ fileprivate extension TTABannerView {
         backgroundColor = .lightGray
         collectionView.backgroundColor = .clear
         
-        collectionView.setCollectionViewLayout(_prepareLayout(), animated: false)
+        collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
@@ -216,13 +233,11 @@ fileprivate extension TTABannerView {
         backGroundImageView.frame = bounds
     }
     
-    func _prepareLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
+    func _prepareLayout() {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .horizontal
-        layout.itemSize = bounds.size
-        return layout
+        layout.itemSize = bounds.size == .zero ? CGSize(width: 375, height: 170) : bounds.size
     }
 }
 
@@ -246,6 +261,7 @@ fileprivate extension TTABannerView {
 fileprivate extension TTABannerView {
     
     func addTimer() {
+        guard timer == nil else { return }
         timer = Timer.scheduledTimer(timeInterval: autoScrollTimeInterval, target: self, selector: #selector(autoScrollToNext), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .commonModes)
     }
