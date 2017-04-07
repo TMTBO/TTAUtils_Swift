@@ -16,6 +16,10 @@ public final class TTAUtils<Base> {
     }
 }
 
+public class TTAUtilsManager {
+    static let shared = TTAUtilsManager()
+}
+
 /// A type that has TTAUtils extensions.
 
 public protocol TTAUtilsCompatiable {

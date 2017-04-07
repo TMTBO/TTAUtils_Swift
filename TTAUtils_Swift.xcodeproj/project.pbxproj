@@ -49,6 +49,8 @@
 		796760491E68230600A66400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604B1E68230600A66400 /* InfoPlist.strings */; };
 		7967604D1E68232900A66400 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604F1E68232900A66400 /* Localizable.strings */; };
 		797C072C1E95DAB90007D828 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C072B1E95DAB90007D828 /* Log.swift */; };
+		798CA8481E9635780011DDB7 /* TTABannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CA8471E9635780011DDB7 /* TTABannerView.swift */; };
+		798CA84A1E963CB90011DDB7 /* TTABannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */; };
 		79E985D21E72D4CD00D76A95 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */; };
 		79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C51E72D4CD00D76A95 /* BannerModel.swift */; };
 		79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985CE1E72D4CD00D76A95 /* BannerView.swift */; };
@@ -133,6 +135,8 @@
 		7967604E1E68232900A66400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		796760501E68232B00A66400 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		797C072B1E95DAB90007D828 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		798CA8471E9635780011DDB7 /* TTABannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerView.swift; sourceTree = "<group>"; };
+		798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerViewCell.swift; sourceTree = "<group>"; };
 		79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		79E985C51E72D4CD00D76A95 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		79E985CE1E72D4CD00D76A95 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 		796760511E6828AC00A66400 /* CycleView */ = {
 			isa = PBXGroup;
 			children = (
+				798CA8471E9635780011DDB7 /* TTABannerView.swift */,
+				798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */,
 			);
 			path = CycleView;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				797C072C1E95DAB90007D828 /* Log.swift in Sources */,
 				796760421E68222000A66400 /* UIImage+Extension.swift in Sources */,
 				796760361E681FF700A66400 /* CostumConfiguration.swift in Sources */,
+				798CA84A1E963CB90011DDB7 /* TTABannerViewCell.swift in Sources */,
 				796760381E681FF700A66400 /* MainTabBarController.swift in Sources */,
 				796760331E681FF700A66400 /* CategoryViewController.swift in Sources */,
 				795A65831E8902040003071A /* TTAHUD.swift in Sources */,
@@ -754,6 +761,7 @@
 				79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */,
 				790671A21E825A08003C27D1 /* TTAWebViewController.swift in Sources */,
 				790671A61E8283C0003C27D1 /* TTAWebViewController+UI.swift in Sources */,
+				798CA8481E9635780011DDB7 /* TTABannerView.swift in Sources */,
 				793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */,
 				795A65801E88FE020003071A /* HudProgressTableViewController.swift in Sources */,
 				79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */,

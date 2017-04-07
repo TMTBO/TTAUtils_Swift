@@ -32,3 +32,19 @@ fileprivate extension UIImageView {
         kf.setImage(with: resource, placeholder: placeholder, options: options, progressBlock: progressBlock, completionHandler: completionHandler)
     }
 }
+
+extension TTAUtilsManager {
+    
+    func clearMemoryCache() {
+        KingfisherManager.shared.cache.clearMemoryCache()
+    }
+    func clearDiskCache() {
+        KingfisherManager.shared.cache.clearDiskCache()
+    }
+    func clearDiskCache(completion: @escaping () -> ()) {
+        KingfisherManager.shared.cache.clearDiskCache(completion: completion)
+    }
+    func calculateDiskCacheSize(completion handler: @escaping ((_ size: UInt) -> ())) {
+        KingfisherManager.shared.cache.calculateDiskCacheSize(completion: handler)
+    }
+}

@@ -70,7 +70,23 @@ extension HomeViewController {
     
     private func prepareTableView() {
         tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
-        tableView.tableHeaderView = BannerView(frame: CGRect(x: 0, y: 0, width: kSCREEN_WIDTH, height: 200), delegate: nil)
+//        tableView.tableHeaderView = BannerView(frame: CGRect(x: 0, y: 0, width: kSCREEN_WIDTH, height: 200), delegate: nil)
+        
+        let images = ["http://b.hiphotos.baidu.com/image/h%3D200/sign=38c8f3dbd9a20cf45990f9df46084b0c/d058ccbf6c81800a7892fd52b83533fa828b4772.jpg", "http://b.hiphotos.baidu.com/image/h%3D200/sign=38c8f3dbd9a20cf45990f9df46084b0c/d058ccbf6c81800a7892fd52b83533fa828b4772.jpg", "http://b.hiphotos.baidu.com/image/h%3D200/sign=38c8f3dbd9a20cf45990f9df46084b0c/d058ccbf6c81800a7892fd52b83533fa828b4772.jpg"]
+        
+//        images = ["login_logo", "login_logo", "login_logo"]
+        
+        let frame = CGRect(x: 0, y: 0, width: kSCREEN_WIDTH, height: 200)
+        
+        var bannerView = TTABannerView(frame, imageURLStrings: images, delegate: self)
+        let image = UIImage(named: "login_logo")
+        bannerView = TTABannerView(frame, placeholderImage: image, delegate: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            bannerView.imageURLStrings = images
+//            bannerView.imageNames = images
+        }
+        
+        tableView.tableHeaderView = bannerView
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCELL_IDENTIFIER)
     }
@@ -85,7 +101,6 @@ extension HomeViewController {
 extension HomeViewController {
     @objc func didClickHomeSearchButton(button: UIButton) {
         Log(#function)
-        LogFunction()
     }
     
 }
@@ -141,6 +156,13 @@ extension HomeViewController {
         guard let newVc = vc else { return }
         vc?.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newVc, animated: true)
+    }
+}
+
+extension HomeViewController: TTABannerViewDelegate {
+    
+    func bannerView(_ bannerView: TTABannerView, didSelectItemAt index: Int) {
+        Log("Hello world")
     }
 }
 
