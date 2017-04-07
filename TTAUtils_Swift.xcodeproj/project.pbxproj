@@ -27,6 +27,8 @@
 		793C57621E69460F002F7093 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57611E69460F002F7093 /* UIButton+Extension.swift */; };
 		793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57631E6946C1002F7093 /* UILabel+Extension.swift */; };
 		793C57661E69470D002F7093 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C57651E69470D002F7093 /* UIImageView+Extension.swift */; };
+		7949808E1E9730730020D3FD /* TTABannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949808C1E9730730020D3FD /* TTABannerView.swift */; };
+		7949808F1E9730730020D3FD /* TTABannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949808D1E9730730020D3FD /* TTABannerViewCell.swift */; };
 		795A65801E88FE020003071A /* HudProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A657F1E88FE020003071A /* HudProgressTableViewController.swift */; };
 		795A65831E8902040003071A /* TTAHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A65821E8902040003071A /* TTAHUD.swift */; };
 		79675FF91E681F8000A66400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79675FF81E681F8000A66400 /* Assets.xcassets */; };
@@ -49,11 +51,8 @@
 		796760491E68230600A66400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604B1E68230600A66400 /* InfoPlist.strings */; };
 		7967604D1E68232900A66400 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967604F1E68232900A66400 /* Localizable.strings */; };
 		797C072C1E95DAB90007D828 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C072B1E95DAB90007D828 /* Log.swift */; };
-		798CA8481E9635780011DDB7 /* TTABannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CA8471E9635780011DDB7 /* TTABannerView.swift */; };
-		798CA84A1E963CB90011DDB7 /* TTABannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */; };
 		79E985D21E72D4CD00D76A95 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */; };
 		79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985C51E72D4CD00D76A95 /* BannerModel.swift */; };
-		79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985CE1E72D4CD00D76A95 /* BannerView.swift */; };
 		79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985CF1E72D4CD00D76A95 /* PublicView.swift */; };
 		79E985D91E72D4CD00D76A95 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985D01E72D4CD00D76A95 /* SelectView.swift */; };
 		79E985DB1E72FB3500D76A95 /* DataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E985DA1E72FB3500D76A95 /* DataPickerViewController.swift */; };
@@ -103,6 +102,8 @@
 		793C57611E69460F002F7093 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		793C57631E6946C1002F7093 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		793C57651E69470D002F7093 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		7949808C1E9730730020D3FD /* TTABannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerView.swift; sourceTree = "<group>"; };
+		7949808D1E9730730020D3FD /* TTABannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerViewCell.swift; sourceTree = "<group>"; };
 		795A657F1E88FE020003071A /* HudProgressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudProgressTableViewController.swift; sourceTree = "<group>"; };
 		795A65821E8902040003071A /* TTAHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAHUD.swift; sourceTree = "<group>"; };
 		79675FEE1E681F8000A66400 /* TTAUtils_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTAUtils_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,11 +136,8 @@
 		7967604E1E68232900A66400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		796760501E68232B00A66400 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		797C072B1E95DAB90007D828 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		798CA8471E9635780011DDB7 /* TTABannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerView.swift; sourceTree = "<group>"; };
-		798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTABannerViewCell.swift; sourceTree = "<group>"; };
 		79E985C31E72D4CD00D76A95 /* BaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		79E985C51E72D4CD00D76A95 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
-		79E985CE1E72D4CD00D76A95 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		79E985CF1E72D4CD00D76A95 /* PublicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicView.swift; sourceTree = "<group>"; };
 		79E985D01E72D4CD00D76A95 /* SelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		79E985DA1E72FB3500D76A95 /* DataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +235,15 @@
 				792632051E78E5C100B8A391 /* ApiResponse.swift */,
 			);
 			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		7949808B1E9730730020D3FD /* TTABannerView */ = {
+			isa = PBXGroup;
+			children = (
+				7949808C1E9730730020D3FD /* TTABannerView.swift */,
+				7949808D1E9730730020D3FD /* TTABannerViewCell.swift */,
+			);
+			path = TTABannerView;
 			sourceTree = "<group>";
 		};
 		795A65811E8901F00003071A /* HUD */ = {
@@ -359,11 +366,11 @@
 			children = (
 				7967602F1E681FF700A66400 /* GlobalFunctions.swift */,
 				791DC24D1E8A1A880054967B /* TTAUtils.swift */,
+				7949808B1E9730730020D3FD /* TTABannerView */,
 				797C072A1E95DA9B0007D828 /* Log */,
 				795A65811E8901F00003071A /* HUD */,
 				790671A01E825991003C27D1 /* WebViewController */,
 				792631FC1E78E56A00B8A391 /* Network */,
-				796760511E6828AC00A66400 /* CycleView */,
 				7967603B1E68222000A66400 /* Category */,
 				796760301E681FF700A66400 /* LanguageTool */,
 			);
@@ -393,15 +400,6 @@
 				791DC2481E8A1A800054967B /* String+MD5.swift */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		796760511E6828AC00A66400 /* CycleView */ = {
-			isa = PBXGroup;
-			children = (
-				798CA8471E9635780011DDB7 /* TTABannerView.swift */,
-				798CA8491E963CB90011DDB7 /* TTABannerViewCell.swift */,
-			);
-			path = CycleView;
 			sourceTree = "<group>";
 		};
 		797C072A1E95DA9B0007D828 /* Log */ = {
@@ -449,7 +447,6 @@
 		79E985CD1E72D4CD00D76A95 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79E985CE1E72D4CD00D76A95 /* BannerView.swift */,
 				79E985CF1E72D4CD00D76A95 /* PublicView.swift */,
 				79E985D01E72D4CD00D76A95 /* SelectView.swift */,
 			);
@@ -749,7 +746,7 @@
 				797C072C1E95DAB90007D828 /* Log.swift in Sources */,
 				796760421E68222000A66400 /* UIImage+Extension.swift in Sources */,
 				796760361E681FF700A66400 /* CostumConfiguration.swift in Sources */,
-				798CA84A1E963CB90011DDB7 /* TTABannerViewCell.swift in Sources */,
+				7949808F1E9730730020D3FD /* TTABannerViewCell.swift in Sources */,
 				796760381E681FF700A66400 /* MainTabBarController.swift in Sources */,
 				796760331E681FF700A66400 /* CategoryViewController.swift in Sources */,
 				795A65831E8902040003071A /* TTAHUD.swift in Sources */,
@@ -761,7 +758,7 @@
 				79E985D31E72D4CD00D76A95 /* BannerModel.swift in Sources */,
 				790671A21E825A08003C27D1 /* TTAWebViewController.swift in Sources */,
 				790671A61E8283C0003C27D1 /* TTAWebViewController+UI.swift in Sources */,
-				798CA8481E9635780011DDB7 /* TTABannerView.swift in Sources */,
+				7949808E1E9730730020D3FD /* TTABannerView.swift in Sources */,
 				793C57641E6946C1002F7093 /* UILabel+Extension.swift in Sources */,
 				795A65801E88FE020003071A /* HudProgressTableViewController.swift in Sources */,
 				79E985D81E72D4CD00D76A95 /* PublicView.swift in Sources */,
@@ -774,7 +771,6 @@
 				796760341E681FF700A66400 /* HomeViewController.swift in Sources */,
 				790671AA1E828645003C27D1 /* TTAWebViewController+WKScriptMessageHandler.swift in Sources */,
 				791DC24A1E8A1A800054967B /* Date+Extension.swift in Sources */,
-				79E985D71E72D4CD00D76A95 /* BannerView.swift in Sources */,
 				790671AE1E828696003C27D1 /* TTAWebViewController+WKNavigationDelegate.swift in Sources */,
 				791DC24B1E8A1A800054967B /* String+Extension.swift in Sources */,
 				79E985D91E72D4CD00D76A95 /* SelectView.swift in Sources */,
