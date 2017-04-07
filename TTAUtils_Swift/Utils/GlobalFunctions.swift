@@ -17,7 +17,7 @@ func Log<T>(_ message: T..., file: String = #file, line: Int = #line, method: St
         let dateString = formatter.string(from: Date())
         let fileName = String((file as NSString).lastPathComponent.characters.dropLast(6))
         let messageString = String(describing: message)
-        print("🕐", "->\(dateString)|", "<\(fileName)>", "[line: \(line)]", "{\(method)}:", messageString)
+        print("🕐\(dateString)|", "<\(fileName)>", "[line: \(line)]", "{\(method)}:", messageString)
     #endif
 }
 
