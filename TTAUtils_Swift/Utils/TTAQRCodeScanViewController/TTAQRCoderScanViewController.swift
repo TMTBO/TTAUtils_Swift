@@ -17,7 +17,7 @@ class TTAQRCodeScanViewController: UIViewController {
         static let turnOnFlashLightTip = "点击打开灯光"
         static let turnOffFlashLightTip = "点击关闭灯光"
         static let errorTip = "提醒"
-        static let errorMessage = "请在iPhone的\"设置-隐私-相机\"选项中,允许本程序访问您的相机"
+        static let errorMessage = "请在手机的\"设置-隐私-相机\"选项中,允许本程序访问您的相机"
         static let confirm = "确定"
         static let imagePickerTip = "相册"
     }
