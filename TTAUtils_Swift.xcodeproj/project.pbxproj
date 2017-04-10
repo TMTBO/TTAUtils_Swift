@@ -21,6 +21,7 @@
 		791DC24B1E8A1A800054967B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC2471E8A1A800054967B /* String+Extension.swift */; };
 		791DC24C1E8A1A800054967B /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC2481E8A1A800054967B /* String+MD5.swift */; };
 		791DC24E1E8A1A880054967B /* TTAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC24D1E8A1A880054967B /* TTAUtils.swift */; };
+		792083A31E9B2E0200130990 /* TTAQRCoderScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */; };
 		792632061E78E5C100B8A391 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632041E78E5C100B8A391 /* ApiManager.swift */; };
 		792632071E78E5C100B8A391 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632051E78E5C100B8A391 /* ApiResponse.swift */; };
 		792632091E78EF5500B8A391 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632081E78EF5500B8A391 /* MainService.swift */; };
@@ -96,6 +97,7 @@
 		791DC2471E8A1A800054967B /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		791DC2481E8A1A800054967B /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		791DC24D1E8A1A880054967B /* TTAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAUtils.swift; sourceTree = "<group>"; };
+		792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAQRCoderScanViewController.swift; sourceTree = "<group>"; };
 		792632041E78E5C100B8A391 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		792632051E78E5C100B8A391 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		792632081E78EF5500B8A391 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
@@ -210,6 +212,15 @@
 			);
 			path = WebViewController;
 			sourceTree = "<group>";
+		};
+		792083A11E9B2DDE00130990 /* TTAQRCodeScanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */,
+			);
+			name = TTAQRCodeScanViewController;
+			path = TTAUtils_Swift/Utils/TTAQRCodeScanViewController;
+			sourceTree = SOURCE_ROOT;
 		};
 		792631FC1E78E56A00B8A391 /* Network */ = {
 			isa = PBXGroup;
@@ -369,10 +380,11 @@
 				7949808B1E9730730020D3FD /* TTABannerView */,
 				797C072A1E95DA9B0007D828 /* Log */,
 				795A65811E8901F00003071A /* HUD */,
-				790671A01E825991003C27D1 /* WebViewController */,
 				792631FC1E78E56A00B8A391 /* Network */,
 				7967603B1E68222000A66400 /* Category */,
 				796760301E681FF700A66400 /* LanguageTool */,
+				792083A11E9B2DDE00130990 /* TTAQRCodeScanViewController */,
+				790671A01E825991003C27D1 /* WebViewController */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -779,6 +791,7 @@
 				793C57661E69470D002F7093 /* UIImageView+Extension.swift in Sources */,
 				791DC24C1E8A1A800054967B /* String+MD5.swift in Sources */,
 				79E985DB1E72FB3500D76A95 /* DataPickerViewController.swift in Sources */,
+				792083A31E9B2E0200130990 /* TTAQRCoderScanViewController.swift in Sources */,
 				796760351E681FF700A66400 /* MineViewController.swift in Sources */,
 				796760391E681FF700A66400 /* GlobalFunctions.swift in Sources */,
 			);

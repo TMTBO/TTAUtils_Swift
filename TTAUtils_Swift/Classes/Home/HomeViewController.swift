@@ -92,7 +92,7 @@ extension HomeViewController {
     }
    
     private func prepareData() {
-        groups = [["DataPicker", "TTAWebViewController", "HUD"]]
+        groups = [["DataPicker", "TTAWebViewController", "HUD", "QRCodeScan"]]
     }
 }
 
@@ -151,6 +151,12 @@ extension HomeViewController {
             vc = avc
         } else if indexPath.row == 2 {
             vc = HudProgressTableViewController()
+        } else if indexPath.row == 3 {
+            let avc = TTAQRCodeScanViewController()
+            avc.qrCodeScanResultHandler = { result in
+                Log(result)
+            }
+            vc = avc
         }
         vc?.title = item(at: indexPath)
         guard let newVc = vc else { return }

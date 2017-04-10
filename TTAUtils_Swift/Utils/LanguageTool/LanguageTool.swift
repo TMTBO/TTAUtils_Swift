@@ -17,11 +17,13 @@ public enum AppLanguages : String {
     case en = "en"
 }
 
+fileprivate let languageSuffix = ["-CN", "-TW", "-HK", "-US"]
+
 // MARK: - Function
 
 func TTALocalizedString(_ key: String, comment: String = "") -> String {
-    let bundlePath = Bundle.main.path(forResource: getCurrentLanguage(), ofType: "lproj");
-    let bundle = Bundle(path: bundlePath!)
+    guard let bundlePath = Bundle.main.path(forResource: getCurrentLanguage(), ofType: "lproj") else { return "Can not find the 'lproj' path" }
+    let bundle = Bundle(path: bundlePath)
     let value = NSLocalizedString(key, tableName: nil, bundle: bundle!, value: "", comment: comment)
     return value
 }
@@ -29,7 +31,9 @@ func TTALocalizedString(_ key: String, comment: String = "") -> String {
 func getCurrentLanguage() -> String {
     let languages = UserDefaults.standard.object(forKey: kAPPLE_LANGUAGE) as? [String]
     guard let currentLanguage = languages?.first else { return AppLanguages.cn.rawValue }
-    return currentLanguage
+    let leftStrig = String(currentLanguage.characters.dropLast(3))
+    let suffix = currentLanguage.replacingOccurrences(of: leftStrig, with: "")
+    return currentLanguage.contains(suffix) ? leftStrig : currentLanguage
 }
 
 func setNewLanguage(_ newLanguage: AppLanguages) {

@@ -68,17 +68,25 @@ extension TTAUtils where Base: UIImage {
         var image: UIImage
         var ratio: CGFloat
         
+        /// Center image's max ratio.
+        /// This is the max recognizable ratio I've ever tried
+        private static var maxRatio: CGFloat {
+            return 0.35
+        }
+        
         static private func _validateRatio(_ ratio: CGFloat) -> Bool {
-            return ratio <= 0.4
+            return ratio <= maxRatio
         }
         
         init(image: UIImage, ratio: CGFloat) {
             self.image = image
-            self.ratio = QRCodeCenterImage._validateRatio(ratio) ? ratio : 0.4
+            self.ratio = QRCodeCenterImage._validateRatio(ratio) ? ratio : QRCodeCenterImage.maxRatio
         }
     }
     
-    class func createQRCode(_ content: Data?, center image: QRCodeCenterImage?) -> UIImage {
+    /// Creat QRCode with a `Data`
+    /// If want a image in the center of the QRCode, pass a `QRCodeCenterImage` instance
+    class func createQRCode(_ content: Data?, center image: QRCodeCenterImage? = nil) -> UIImage {
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setDefaults()
         filter?.setValue(content, forKey: "inputMessage")
@@ -87,6 +95,37 @@ extension TTAUtils where Base: UIImage {
         let qrcodeImage = UIImage(ciImage: ciimage)
         guard let centerImage = image else { return qrcodeImage }
         return _drawCenterImage(in: qrcodeImage, center: centerImage)
+    }
+    
+    /// Read a QRCode from a image, then we will get the strings in the image
+    /// If there are  more than on QRCode in the image, you will get more than one string
+    /// If there are  no QRCode in the image, you will get a nil
+    /// So here we got a `[String]?` as the result
+    @available(*, deprecated, message: "UIImage Class method deprecated. Use `image.tta.scanQRCode()` instead", renamed: "tta.scanQRCode()")
+    class func scanQRCode(_ image: UIImage) -> [String]? {
+        //二维码读取
+        guard let ciImage = CIImage(image:image) else { return nil }
+        let context = CIContext(options: nil)
+        guard let detector = CIDetector(ofType: CIDetectorTypeQRCode,
+                                        context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh]) else { return nil }
+        let features = detector.features(in: ciImage)
+        guard features.count != 0 else { return nil }
+        return features.map { ($0 as!CIQRCodeFeature).messageString ?? "" }
+    }
+    
+    /// Read a QRCode from a image, then we will get the strings in the image
+    /// If there are  more than on QRCode in the image, you will get more than one string
+    /// If there are  no QRCode in the image, you will get a nil
+    /// So here we got a `[String]?` as the result
+    func scanQRCode() -> [String]? {
+        //二维码读取
+        guard let ciImage = CIImage(image:base) else { return nil }
+        let context = CIContext(options: nil)
+        guard let detector = CIDetector(ofType: CIDetectorTypeQRCode,
+                                        context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh]) else { return nil }
+        let features = detector.features(in: ciImage)
+        guard features.count != 0 else { return nil }
+        return features.map { ($0 as!CIQRCodeFeature).messageString ?? "" }
     }
     
     class private func _drawCenterImage(in qrcodeImage: UIImage, center image: QRCodeCenterImage) -> UIImage {
