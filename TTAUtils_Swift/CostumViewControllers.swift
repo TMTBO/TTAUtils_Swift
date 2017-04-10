@@ -120,6 +120,7 @@ extension UIViewController {
 extension UINavigationController: UINavigationControllerDelegate {
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return self.topViewController!.preferredStatusBarStyle
+        guard let topVc = self.topViewController else { return .lightContent }
+        return topVc.preferredStatusBarStyle
     }
 }

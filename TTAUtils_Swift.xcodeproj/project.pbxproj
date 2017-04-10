@@ -22,6 +22,10 @@
 		791DC24C1E8A1A800054967B /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC2481E8A1A800054967B /* String+MD5.swift */; };
 		791DC24E1E8A1A880054967B /* TTAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC24D1E8A1A880054967B /* TTAUtils.swift */; };
 		792083A31E9B2E0200130990 /* TTAQRCoderScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */; };
+		792083A61E9B58DD00130990 /* scanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 792083A41E9B58DD00130990 /* scanLine@3x.png */; };
+		792083A71E9B58DD00130990 /* scanRectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 792083A51E9B58DD00130990 /* scanRectangle@3x.png */; };
+		792083A91E9B6E9800130990 /* flashlight_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 792083A81E9B6E9800130990 /* flashlight_off@3x.png */; };
+		792083AB1E9B710600130990 /* flashlight_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 792083AA1E9B710600130990 /* flashlight_on@3x.png */; };
 		792632061E78E5C100B8A391 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632041E78E5C100B8A391 /* ApiManager.swift */; };
 		792632071E78E5C100B8A391 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632051E78E5C100B8A391 /* ApiResponse.swift */; };
 		792632091E78EF5500B8A391 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792632081E78EF5500B8A391 /* MainService.swift */; };
@@ -98,6 +102,10 @@
 		791DC2481E8A1A800054967B /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		791DC24D1E8A1A880054967B /* TTAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAUtils.swift; sourceTree = "<group>"; };
 		792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTAQRCoderScanViewController.swift; sourceTree = "<group>"; };
+		792083A41E9B58DD00130990 /* scanLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@3x.png"; sourceTree = "<group>"; };
+		792083A51E9B58DD00130990 /* scanRectangle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanRectangle@3x.png"; sourceTree = "<group>"; };
+		792083A81E9B6E9800130990 /* flashlight_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight_off@3x.png"; sourceTree = "<group>"; };
+		792083AA1E9B710600130990 /* flashlight_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight_on@3x.png"; sourceTree = "<group>"; };
 		792632041E78E5C100B8A391 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		792632051E78E5C100B8A391 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		792632081E78EF5500B8A391 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
@@ -217,6 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				792083A21E9B2E0200130990 /* TTAQRCoderScanViewController.swift */,
+				792083A41E9B58DD00130990 /* scanLine@3x.png */,
+				792083A51E9B58DD00130990 /* scanRectangle@3x.png */,
+				792083A81E9B6E9800130990 /* flashlight_off@3x.png */,
+				792083AA1E9B710600130990 /* flashlight_on@3x.png */,
 			);
 			name = TTAQRCodeScanViewController;
 			path = TTAUtils_Swift/Utils/TTAQRCodeScanViewController;
@@ -586,10 +598,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792083A71E9B58DD00130990 /* scanRectangle@3x.png in Resources */,
+				792083A61E9B58DD00130990 /* scanLine@3x.png in Resources */,
 				790671A41E826EEF003C27D1 /* Test.html in Resources */,
 				79675FFC1E681F8000A66400 /* LaunchScreen.storyboard in Resources */,
 				7967604D1E68232900A66400 /* Localizable.strings in Resources */,
+				792083A91E9B6E9800130990 /* flashlight_off@3x.png in Resources */,
 				796760491E68230600A66400 /* InfoPlist.strings in Resources */,
+				792083AB1E9B710600130990 /* flashlight_on@3x.png in Resources */,
 				79675FF91E681F8000A66400 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -122,7 +122,8 @@ extension TTAUtils where Base: UIImage {
         guard let ciImage = CIImage(image:base) else { return nil }
         let context = CIContext(options: nil)
         guard let detector = CIDetector(ofType: CIDetectorTypeQRCode,
-                                        context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh]) else { return nil }
+                                        context: context,
+                                        options: [CIDetectorAccuracy: CIDetectorAccuracyHigh]) else { return nil }
         let features = detector.features(in: ciImage)
         guard features.count != 0 else { return nil }
         return features.map { ($0 as!CIQRCodeFeature).messageString ?? "" }
