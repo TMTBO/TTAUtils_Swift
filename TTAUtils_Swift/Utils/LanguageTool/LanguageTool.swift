@@ -22,9 +22,10 @@ fileprivate let languageSuffix = ["-CN", "-TW", "-HK", "-US"]
 // MARK: - Function
 
 func TTALocalizedString(_ key: String, comment: String = "") -> String {
-    guard let bundlePath = Bundle.main.path(forResource: getCurrentLanguage(), ofType: "lproj") else { return "Can not find the 'lproj' path" }
-    let bundle = Bundle(path: bundlePath)
-    let value = NSLocalizedString(key, tableName: nil, bundle: bundle!, value: "", comment: comment)
+    guard let bundlePath = Bundle.main.path(forResource: getCurrentLanguage(), ofType: "lproj"),
+        let bundle = Bundle(path: bundlePath) else { return "Can not find the 'lproj' path" }
+    
+    let value = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "", comment: comment)
     return value
 }
 
@@ -33,7 +34,7 @@ func getCurrentLanguage() -> String {
     guard let currentLanguage = languages?.first else { return AppLanguages.cn.rawValue }
     let leftStrig = String(currentLanguage.characters.dropLast(3))
     let suffix = currentLanguage.replacingOccurrences(of: leftStrig, with: "")
-    return currentLanguage.contains(suffix) ? leftStrig : currentLanguage
+    return languageSuffix.contains(suffix) ? leftStrig : currentLanguage
 }
 
 func setNewLanguage(_ newLanguage: AppLanguages) {
