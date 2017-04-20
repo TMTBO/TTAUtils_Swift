@@ -120,7 +120,7 @@ extension TTAWebViewController {
 
 // MARK: - UIGestureRecognizerDelegate
 
-extension TTAWebViewController: UIGestureRecognizerDelegate {
+extension TTAWebViewController {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let aCount = navigationController?.childViewControllers.count, aCount > 0 else { return false }

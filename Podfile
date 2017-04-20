@@ -5,7 +5,7 @@ target 'TTAUtils_Swift' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'TTADataPickerView', :path => '/Users/tobyotenma/Developer/Git/GitHub/TTADataPickerView'
+  pod 'TTADataPickerView'#, :path => '/Users/tobyotenma/Developer/Git/GitHub/TTADataPickerView'
 #  pod 'SwiftNetwork', :path => '/Users/tobyotenma/Developer/Git/GitHub/SwiftNetwork'
   
   
