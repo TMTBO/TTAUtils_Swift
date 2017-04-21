@@ -30,7 +30,7 @@ class TTABannerView: UIView {
         static let collectionViewCellIdentifier = "collectionViewCellIdentifier"
         static let pageControlHeight: CGFloat = 30
         
-        static let countMultiple = 1000
+        static let countMultiple = 100000
     }
     
     // MARK: - Public Properties
@@ -276,15 +276,14 @@ fileprivate extension TTABannerView {
         let index = currentIndex()
         var targetIndex = index + 1
         var isAnimated = true
-        if targetIndex > totalItemCount {
+        if targetIndex >= totalItemCount {
             if isRepeat {
-                targetIndex = totalItemCount / 2
+                targetIndex = totalItemCount % 2 == 0 ? totalItemCount / 2 : totalItemCount / 2 - 1
                 isAnimated = false
             }
         }
         collectionView.scrollToItem(at: IndexPath(item: targetIndex, section: 0), at: .left, animated: isAnimated)
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource
