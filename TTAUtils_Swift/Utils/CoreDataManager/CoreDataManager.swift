@@ -13,6 +13,7 @@ class CoreDataManager: NSObject {
     
     static let shared = CoreDataManager()
    
+    @available(iOS 10.0, *)
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CoreDataDemo")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

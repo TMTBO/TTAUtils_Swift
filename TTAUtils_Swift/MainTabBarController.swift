@@ -30,7 +30,7 @@ extension MainTabBarController {
 // MARK: - Private
 
 extension MainTabBarController {
-    
+
     fileprivate func _configureTabBarController() {
         _configure(childViewController: HomeViewController(), title: TTALocalizedString("tabbarHome"), iconImageName: "tabbar_home");
         _configure(childViewController: CategoryViewController(), title: TTALocalizedString("tabbarCategory"), iconImageName: "tabbar_category");
