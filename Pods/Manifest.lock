@@ -6,6 +6,7 @@ PODS:
   - PKHUD (4.2.1)
   - SnapKit (3.2.0)
   - TTADataPickerView (0.1.6)
+  - TTARefresher (0.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,6 +16,11 @@ DEPENDENCIES:
   - PKHUD
   - SnapKit
   - TTADataPickerView
+  - TTARefresher (from `/Users/tobyotenma/Developer/Git/GitHub/TTARefresher`)
+
+EXTERNAL SOURCES:
+  TTARefresher:
+    :path: "/Users/tobyotenma/Developer/Git/GitHub/TTARefresher"
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -24,7 +30,8 @@ SPEC CHECKSUMS:
   PKHUD: 957ce2a68b3c97a51839b30216120c1dbc0c3a78
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   TTADataPickerView: 37aebde49548e592784da65b6ebf59cbcbd02dde
+  TTARefresher: 4e9c22df7101633f5f2ed5328ea46331431c7f9d
 
-PODFILE CHECKSUM: b23a61155ad696441490f87600bc4671dbad1081
+PODFILE CHECKSUM: 9df20f8dada76aed7f7c888c46f3dba054b57f57
 
 COCOAPODS: 1.2.1

@@ -1,0 +1,6 @@
+framework module TTARefresher {
+  umbrella header "TTARefresher-umbrella.h"
+
+  export *
+  module * { export * }
+}
