@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ESPullToRefresh
+import TTARefresher
 
 class HudProgressTableViewController: UITableViewController, BaseDataSourceProtocol {
 
@@ -29,17 +29,20 @@ class HudProgressTableViewController: UITableViewController, BaseDataSourceProto
         view.backgroundColor = .white
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        tableView.es_addPullToRefresh {
-            Log("pulltorefresh")
+        
+        tableView.ttaRefresher.header = TTARefresherNormalHeader {
+            Log("pull to refresh")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
-                self?.tableView.es_stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
+                self?.tableView.ttaRefresher.header?.endRefreshing()
+                self?.tableView.ttaRefresher.footer?.resetNoMoreData()
             })
         }
-        tableView.es_addInfiniteScrolling {
-            Log("addinfinite")
+        tableView.ttaRefresher.footer = TTARefresherBackNormalFooter {
+            Log("pull up to refresh")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
-                self?.tableView.es_noticeNoMoreData()
+                self?.tableView.ttaRefresher.footer?.endRefreshWithNoMoreData()
             })
+
         }
     }
 

@@ -14,7 +14,6 @@ target 'TTAUtils_Swift' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Kingfisher'
-  pod 'ESPullToRefresh'
   pod 'PKHUD'
   
   # Pods for TTAUtils_Swift
