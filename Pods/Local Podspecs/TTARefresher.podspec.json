@@ -1,8 +1,8 @@
 {
   "name": "TTARefresher",
   "version": "0.1.0",
-  "summary": "A short description of TTARefresher.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "TTARefresher is Swift version of `MJRefresh`",
+  "description": "TTARefresher is Swift version of `MJRefresh`, TTARefresher can work with UIScrollView, UITableView, UICollectionView and UIWebView, WKWebView. Othewise, THANKS the author of `MJRefresh`",
   "homepage": "https://github.com/TMTBO/TTARefresher",
   "license": {
     "type": "MIT",

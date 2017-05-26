@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "19ADD5A9DA8ABDD1A7F6521DCBB3A7C1860B4AA9" : 9223372036854775807,
     "31EDFB6BDA7B19BFB3B80FC4BE4FAAB8FEA41178" : 9223372036854775807,
     "5D38A9E0ADEFFBDBA1FAB0112D10CB4C7382924D" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C13A70C1-0AF5-4165-8F7E-612535B03511",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "19ADD5A9DA8ABDD1A7F6521DCBB3A7C1860B4AA9" : "..\/Git\/GitHub\/TTARefresher",
     "31EDFB6BDA7B19BFB3B80FC4BE4FAAB8FEA41178" : "..\/Git\/GitHub\/TTADataPickerView",
     "5D38A9E0ADEFFBDBA1FAB0112D10CB4C7382924D" : "TTAUtils_Swift\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TTAUtils_Swift.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TMTBO\/TTARefresher.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19ADD5A9DA8ABDD1A7F6521DCBB3A7C1860B4AA9"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TMTBO\/TTADataPickerView.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
